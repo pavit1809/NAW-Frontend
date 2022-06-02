@@ -1,0 +1,82 @@
+@media (min-width: 280px) and (max-width: 540px) {
+  .home-hero {
+    width: 100% !important;
+    padding: 5px !important;
+  }
+  .vs-main {
+    flex-direction: column;
+  }
+  .vs-grid {
+    width: 90%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  .vs-button {
+    margin-top: 20px;
+  }
+  /* .slick-slide {
+    width: 585px !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  } */
+  .subscription-panel {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 10px;
+    width: unset;
+  }
+  .sp-button {
+    margin-top: 15px;
+  }
+  .footer-grid {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .footer-grid-item {
+    width: 90%;
+    justify-content: center;
+  }
+  .footer-grid-one {
+    width: 100%;
+  }
+  .footer-grid-two {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .event-search{
+    margin-bottom: 20px;
+  }
+  .event-card{
+    justify-content: center;
+  }
+  .products-job{
+    width:90%;
+  }
+  .blogs-container{
+    justify-content: center;
+  }
+  .two-col{
+    width:100%;
+  }
+  .sign-main{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .auth-sign{
+    padding-top: 0px!important;
+  }
+  .auth-signup{
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-field{
+    width:100%;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+  }
+  .signin-auth{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

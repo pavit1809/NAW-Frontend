@@ -1,0 +1,229 @@
+.ad-rows {
+  display: flex;
+}
+.ad-row-one {
+  width: 50%;
+}
+.ad-row-two {
+  width: 50%;
+}
+.ad-row-one p {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.input-block label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #151522;
+}
+.input-block input {
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.input-block textarea {
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.ads-purpose {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: rgba(21, 21, 34, 0.5);
+}
+.ads-purpose input {
+  margin-right: 10px;
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.input-block button {
+  background: #3670f8;
+  border-radius: 6px;
+  border: none;
+  padding: 8px 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+}
+.file-upload {
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-top: 11px;
+  background: #fff;
+  padding: 7px 15px;
+}
+.file-upload .file-upload-placeholder {
+  font-size: 14px;
+  color: rgba(21, 21, 34, 0.5);
+}
+.file-upload .file-upload-btn {
+  background: #3670f8;
+  border-radius: 6px;
+  display: inline-flex;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  width: 94px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-innner p {
+  font-weight: 600;
+  font-size: 12px;
+  color: #000000;
+}
+
+.blog-innner span {
+  font-weight: 400;
+  font-size: 10px;
+  color: #717171;
+  line-height: 10px;
+}
+
+.cus-blog-card {
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.people-view span {
+  font-weight: 400;
+  font-size: 13px;
+  color: #828282;
+}
+
+.people-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad-user-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 41px;
+}
+
+.header-sub-title h5 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #000000;
+  margin: 30px 0;
+}
+
+.ad-user-details h4 {
+  margin: 0 80px 0 0;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000000;
+}
+
+.ad-user-details .title {
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.ad-user-details .title p {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px !important;
+  color: #000000 !important;
+}
+
+.ad-user-details .title span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #717171;
+  margin-right: 24px;
+}
+
+.user-table .table-inner {
+  display: flex;
+  align-items: center;
+}
+
+.user-table tbody td,
+.user-table thead th {
+  padding: 15px;
+  text-align: center;
+}
+
+.user-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table tbody th {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.user-table tbody td,
+.user-table tbody td p {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.user-table tbody td {
+  border-top: 1px solid #d1e6ff;
+  background-color: #fff;
+}
+
+.user-table .table-inner img {
+  width: 36px;
+  border-radius: 50%;
+  height: 36px;
+  margin-right: 18px;
+}
+
+.user-table .table-inner p {
+  margin-bottom: 0;
+}
+
+.user-emails {
+  width: 743px;
+  height: 60px;
+  background-color: #fff;
+  border-top: 1px solid #d1e6ff;
+  border-bottom: 1px solid #d1e6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-emails p {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  margin-bottom: 0 !important;
+}

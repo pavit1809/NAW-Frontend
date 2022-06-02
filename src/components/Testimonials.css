@@ -1,0 +1,28 @@
+.testimonials-paper {
+  position: relative;
+  background: #fff;
+}
+.testimonials-paper::before {
+  content: "";
+  background: #fff;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  bottom: -7px;
+  left: calc(50% - 24px);
+  transform: translateX(-50%) rotate(45deg);
+  overflow: hidden;
+  box-shadow: 2px 2px 0px 0px rgb(0 0 0 / 12%);
+}
+.testimonial-cards-wrapper {
+  position: relative;
+}
+.testimonial-cards-wrapper::before {
+  content: "";
+  position: absolute;
+  background: url("./../assets/images/doubleQuotes.png");
+  width: 123px;
+  height: 104px;
+  right: -25px;
+  top: -30px;
+}

@@ -1,0 +1,44 @@
+.admin-sidebar {
+  width: 295px;
+  height: 200vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 13px;
+  padding-right: 13px;
+  box-shadow: 4px 0px 30px rgba(33, 123, 244, 0.15);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 1;
+}
+
+.admin-sidebar .drawer-menu-container {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.admin-sidebar .drawer-menu-container .drawer-item {
+  display: flex;
+  align-items: center;
+  padding-left: 37px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.admin-sidebar .drawer-menu-container .drawer-item.selected {
+  background-color: #3874ff;
+  color: white;
+  box-shadow: 0px 20px 55px rgba(56, 116, 255, 0.25);
+}
+
+.admin-sidebar .drawer-menu-container .drawer-item .drawer-item-menu {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 15px;
+}

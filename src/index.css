@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.slick-prev:before, .slick-next:before {
+  content: none !important;
+}
+.products-competators-cards:first-child {
+  margin-left: 0;
+}
+.products-competators-cards:last-child {
+  margin-right: 0;
+}
+.products-section-cards:first-child {
+  margin-left: 0;
+}
+.products-section-cards:last-child {
+  margin-right: 0;
+}

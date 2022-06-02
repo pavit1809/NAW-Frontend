@@ -1,0 +1,24 @@
+.subscription-panel {
+  position: relative;
+}
+.subscription-panel::after {
+  content: url('./../assets/images/SubPanelRightCorner.png');
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.subscription-panel::before {
+  content: url('./../assets/images/SubscriptionBottomCorner.png');
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.dispatch-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 10;
+}

@@ -1,0 +1,263 @@
+.admin-users {
+}
+
+.admin-users .header-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.admin-users .add-user-banner {
+  width: 100%;
+  border-radius: 10px;
+  height: 266px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 46px;
+  padding-right: 46px;
+  justify-content: space-between;
+}
+
+.admin-users .add-user-banner .add-user-banner-img {
+  height: 213px;
+}
+
+.admin-users .add-user-banner .add-user-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.admin-users .add-user-banner .add-user-banner-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.admin-users .add-user-banner .file-upload {
+  height: 50px;
+  width: 393px;
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-top: 34px;
+}
+
+.admin-users .add-user-banner .file-upload .file-upload-btn {
+  background: #3670f8;
+  border-radius: 6px;
+  display: inline-flex;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  width: 94px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-users .add-user-banner .file-upload .file-upload-placeholder {
+  font-size: 14px;
+  color: rgba(21, 21, 34, 0.5);
+}
+
+.admin-users .manage-users-section {
+  margin-top: 60px;
+}
+
+.admin-users .manage-users-section .manage-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 46px;
+}
+
+.admin-users .manage-users-section .list-users-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 46px;
+}
+
+.admin-users .manage-users-section .user-list-container {
+}
+
+.admin-users .manage-users-section .user-list-card {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 10px;
+  padding: 22px 35px;
+  background-color: #fff;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-users .manage-users-section .user-list-card .action-icon {
+  margin-left: 58px;
+}
+.admin-users .manage-users-section .user-list-card .user-icon {
+  margin-right: 18px;
+}
+
+.admin-users .manage-users-section .user-list-card .user-name-div {
+  display: flex;
+  flex-direction: column;
+  width: 216px;
+}
+
+.admin-users .manage-users-section .user-list-card .user-name-div .user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admin-users
+  .manage-users-section
+  .user-list-card
+  .user-name-div
+  .user-profession {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.admin-users .manage-users-section .user-list-card .user-info-div {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  width: 240px;
+}
+
+.user-list-card .user-image-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.admin-users .manage-users-section .user-list-card .user-action-div {
+  display: flex;
+  align-items: center;
+  color: #3770f5;
+  font-size: 14px;
+}
+
+.admin-users .view-more-btn-container {
+  margin-top: 28px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.admin-users .view-more-btn-container .view-more-btn {
+  width: 141px;
+  height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(54, 112, 248, 0.4);
+  border-radius: 6px;
+  border: 1px solid #3670f8;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #3670f8;
+  cursor: pointer;
+}
+
+.user-details {
+}
+
+.user-details .header-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 46px;
+}
+
+.user-details .user-details-container {
+  width: 100%;
+  border-radius: 8px;
+  padding: 40px;
+  min-height: 800px;
+  background-color: #fff;
+}
+
+.user-details .user-image-section {
+  display: flex;
+  margin-bottom: 54px;
+}
+
+.user-details .user-image-section img {
+  margin-right: 43px;
+}
+
+.user-details .user-image-section .user-name-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details .user-image-section .user-name-section .user-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.user-details .user-image-section .user-name-section .user-prof {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-details .user-info-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-details .left-info-section {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.user-details .right-info-section {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.user-details .info-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.user-details .info-input {
+  height: 50px;
+  border: 1px solid rgba(228, 228, 228, 0.9);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+@media (max-width: 1366px) {
+  .admin-users .manage-users-section .user-list-card .action-icon {
+    margin-left: 20px;
+    margin-right: 6px !important;
+  }
+}
+@media (max-width: 1199px) {
+  .admin-users .manage-users-section .user-list-card {
+    flex-wrap: wrap;
+  }
+  .admin-users .manage-users-section .user-list-card .user-action-div {
+    padding-top: 16px;
+    min-width: 100%;
+    justify-content: flex-end;
+  }
+}

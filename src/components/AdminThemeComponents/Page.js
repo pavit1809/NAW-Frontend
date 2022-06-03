@@ -1,13 +1,13 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
-import { forwardRef } from "react";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
+import { forwardRef } from 'react';
 // material
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-const Page = forwardRef(({ children, title = "", ...other }, ref) => (
+const Page = forwardRef(({ children, title = '', ...other }, ref) => (
   <Box ref={ref} {...other}>
     <Helmet>
       <title>{title}</title>
@@ -18,7 +18,7 @@ const Page = forwardRef(({ children, title = "", ...other }, ref) => (
 
 Page.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default Page;

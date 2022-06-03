@@ -6,31 +6,50 @@ import TwitterIcon from "@mui/icons-material/Twitter"
 import Instagram from "@mui/icons-material/Instagram"
 import Linkedin from "@mui/icons-material/LinkedIn"
 import "./Footer.css"
-import '../pages/Home/Home.css'
 
 export default function Footer() {
   return (
-    <footer style={{background: '#F4FBFF',}}>
-      <Container className="footer-container" maxWidth='xl' sx={{p: 8, paddingLeft:'134px'}}>
-        <Grid container justifyContent='space-between' className="footer-grid">
-          <Grid className="footer-grid-item" item sx={{display: 'flex',flexDirection: 'column',width: '30%',mr: 3}}>
-            <Box sx={{mb: 3}}>
+    <footer style={
+        {
+          background: '#F4FBFF',
+        }
+      }>
+      <Container maxWidth='xl' sx={
+        {
+          p: 8
+        }
+      }>
+        <Grid container justifyContent='space-between'>
+          <Grid item sx={
+            {
+              display: 'flex',
+              flexDirection: 'column',
+              width: '30%',
+              mr: 3
+            }
+          } >
+            <Box sx={
+              {
+                mb: 3
+              }
+            }>
               <img src={logo} alt="logo" />
             </Box>
-            <Typography component='p' sx={{lineHeight: 2,mb: 3}}>
+            <Typography component='p' sx={
+              {
+                lineHeight: 2,
+                mb: 3
+              }
+            }>
               Network After Work is a professional community consisting of Entrepreneurs, Professionals, Executives and thought leaders who understand the importance of building meaningful connections
             </Typography>
-            <Grid container direction='row' className="footer-grid-item">
+
+            <Grid container direction='row'>
               <IconButton aria-label="facebook" size="large">
                 <TwitterIcon sx={
                   {
                     height: '1.5em',
-                    width: '1.5em',
-                    border: '1px solid #707375',
-                    borderRadius:'50%',
-                    padding:'5px',
-                    background:'#707375',
-                    color:'white',
+                    width: '1.5em'
                   }
                 }/>
               </IconButton>
@@ -38,12 +57,7 @@ export default function Footer() {
                 <Instagram sx={
                   {
                     height: '1.5em',
-                    width: '1.5em',
-                    border: '1px solid #707375',
-                    borderRadius:'50%',
-                    padding:'5px',
-                    background:'#707375',
-                    color:'white',
+                    width: '1.5em'
                   }
                 }/>
               </IconButton>
@@ -51,12 +65,7 @@ export default function Footer() {
                 <FacebookIcon sx={
                   {
                     height: '1.5em',
-                    width: '1.5em',
-                    border: '1px solid #707375',
-                    borderRadius:'50%',
-                    padding:'5px',
-                    background:'#707375',
-                    color:'white',
+                    width: '1.5em'
                   }
                 }/>
               </IconButton>
@@ -64,19 +73,26 @@ export default function Footer() {
                 <Linkedin sx={
                   {
                     height: '1.5em',
-                    width: '1.5em',
-                    border: '1px solid #707375',
-                    borderRadius:'50%',
-                    padding:'5px',
-                    background:'#707375',
-                    color:'white',
+                    width: '1.5em'
                   }
                 }/>
               </IconButton>
             </Grid>
           </Grid>
-          <Grid className="footer-grid-one" item sx={{display: 'flex',flexDirection: 'column',width: '10%'}} >
-            <Typography component='div' variant='h5' sx={{mb: 3,fontWeight: '600',lineHeight: '2'}} className='underline'>
+          <Grid item sx={
+            {
+              display: 'flex',
+              flexDirection: 'column',
+              width: '10%'
+            }
+          } >
+            <Typography component='div' variant='h5' sx={
+              {
+                mb: 3,
+                fontWeight: '600',
+                lineHeight: '2'
+              }
+            } className='underline'>
               Quick Links
             </Typography>
             <Grid container direction='column'>
@@ -91,8 +107,20 @@ export default function Footer() {
               <Link href='#'>Terms & Conditions</Link>
             </Grid>
           </Grid>
-          <Grid className="footer-grid-two" item sx={{display: 'flex',flexDirection: 'column',width: '20%'}} >
-            <Typography component='div' variant='h5' sx={{mb: 3,fontWeight: '600',lineHeight: '2'}} className='underline'>
+          <Grid item sx={
+            {
+              display: 'flex',
+              flexDirection: 'column',
+              width: '20%'
+            }
+          } >
+            <Typography component='div' variant='h5' sx={
+              {
+                mb: 3,
+                fontWeight: '600',
+                lineHeight: '2'
+              }
+            } className='underline'>
               Our Events
             </Typography>
             <Grid container direction='column'>
@@ -104,9 +132,9 @@ export default function Footer() {
         </Grid>
       </Container>
       <Grid container justifyContent='center' py={5} borderTop='1px solid rgba(159, 159, 159, 0.4)'>
-        <Typography component='p'>
-          &copy; 2021 Network After Work. All rights reserved.
-        </Typography>
+            <Typography component='p'>
+              &copy; 2021 Network After Work. All rights reserved.
+            </Typography>
       </Grid>
     </footer>
   )

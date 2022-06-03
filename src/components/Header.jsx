@@ -1,37 +1,28 @@
-import {
-  AppBar,
-  Container,
-  Toolbar,
-  Grid,
-  Button,
-  Tabs,
-  Tab,
-} from "@mui/material";
+import { AppBar, Container, Toolbar, Grid, Button, Tabs, Tab } from "@mui/material";
 import React, { useEffect } from "react";
-import logo from "./../assets/images/Logo.png";
+import logo from "./../assets/images/Logo.png"
 import { useLocation, useNavigate } from "react-router-dom";
-import "./Footer.css";
-
+import './Header.css'
 const pages = [
   {
-    name: "Home",
-    url: "/",
+    name: 'Home',
+    url: '/'
   },
   {
-    name: "Events",
-    url: "/events",
+    name: 'Events',
+    url: '/events'
   },
   {
-    name: "Products",
-    url: "/products",
+    name: 'Products',
+    url: '/products'
   },
   {
-    name: "Membership",
-    url: "/membership",
+    name: 'Membership',
+    url: '/membership'
   },
   {
-    name: "Blog",
-    url: "/blogs",
+    name:  'Blog',
+    url: '/blogs'
   },
 ];
 function LinkTab(props) {
@@ -61,10 +52,10 @@ export default function Header() {
 
   useEffect(() => {
     const pageIndex = pages.findIndex((page) => {
-      return location.pathname === page.url;
-    });
-    setValue(pageIndex !== -1 ? pageIndex : 0);
-  }, []);
+      return location.pathname == page.url;
+    })
+    setValue(pageIndex != -1 ? pageIndex : 0)
+  }, [])
 
   const displayDesktop = () => {
     return (
@@ -121,14 +112,14 @@ export default function Header() {
             </Tabs>
             <Button
               variant="outlined"
-              sx={{ m: 2, padding: "15px 30px" }}
+              sx={{ m: 2 }}
               onClick={() => navigate("/sign-up")}
             >
               Sign up
             </Button>
             <Button
               variant="contained"
-              sx={{ m: 2, padding: "15px 30px" }}
+              sx={{ m: 2 }}
               onClick={() => navigate("/sign-in")}
             >
               Sign in
@@ -142,7 +133,9 @@ export default function Header() {
   return (
     <header>
       <AppBar position="fixed" color="inherit" elevation={1}>
-        <Container className="header-container">{displayDesktop()}</Container>
+        <Container >
+          {displayDesktop()}
+        </Container>
       </AppBar>
     </header>
   );

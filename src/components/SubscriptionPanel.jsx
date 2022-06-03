@@ -3,10 +3,7 @@ import * as React from 'react';
 import MailOutline from "@mui/icons-material/MailOutline"
 import "./SubscriptionPanel.css"
 import dispatchIcon from "./../assets/images/dispatch.png"
-import '../pages/Home/Home.css'
-
 export default function SubscriptionPanel() {
-
   return (
     <Container disableGutters sx={{py: 10, px: 16, mt: 8, background: '#3874ff26', borderRadius: '40px',}} className='subscription-panel'>
       <img src={dispatchIcon} alt="dispatch" className='dispatch-icon'/>
@@ -29,7 +26,7 @@ export default function SubscriptionPanel() {
               inputProps={{ 'aria-label': 'Your Email' }}
             />
           </Paper>
-          <Button variant="contained" size="large" className="sp-button">
+          <Button variant="contained" size="large">
             Join Now
           </Button>
         </Grid>

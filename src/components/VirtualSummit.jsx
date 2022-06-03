@@ -3,15 +3,14 @@ import * as React from 'react';
 import virtualSummit from './../assets/images/virtualSummit.png'
 import virtualSummitCounter from "./../assets/images/virtualSummitCounter.png"
 import ArrowForward from "@mui/icons-material/ArrowForward"
-import '../pages/Home/Home.css'
 
 export default function VirtualSummit() {
   return(
-    <Container disableGutters sx={{py: 10, display: 'flex', justifyContent: 'space-between'}} className="vs-main">
+    <Container disableGutters sx={{py: 10, display: 'flex', justifyContent: 'space-between'}}>
       <Grid>
         <img src={virtualSummit} alt="virtual summit" />
       </Grid>
-      <Grid container direction='column' width='35%' justifyContent='space-evenly' py={8} className="vs-grid">
+      <Grid container direction='column' width='35%' justifyContent='space-evenly' py={8}>
         <Typography component='p' sx={{
           fontWeight: '500',
           fontSize: '18px',
@@ -36,7 +35,7 @@ export default function VirtualSummit() {
           1-Day Online Event Ends In:
         </Typography>
         <img src={virtualSummitCounter} alt="virtual summit counter" />
-        <Button variant="contained" size="large" className="vs-button">
+        <Button variant="contained" size="large">
           Get My Free Pass
           <ArrowForward />
         </Button>

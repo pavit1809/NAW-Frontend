@@ -19,26 +19,26 @@
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.28.3",
     "axios": "^0.25.0",
+    "bootstrap": "^5.1.3",
     "change-case": "^4.1.2",
     "date-fns": "^2.24.0",
     "dotenv": "^15.0.0",
     "faker": "^5.5.3",
     "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
-    "google-maps-react": "^2.0.6",
     "history": "^5.0.1",
     "lodash": "^4.17.21",
-    "moment": "^2.29.2",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-apexcharts": "^1.3.9",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.1.2",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "^3.0.1",
     "react-slick": "^0.28.1",
-    "recharts": "^2.1.9",
+    "recharts": "^2.1.10",
     "simplebar": "^5.3.5",
     "simplebar-react": "^2.3.5",
     "slick-carousel": "^1.8.1",
@@ -77,15 +77,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-react": "^7.29.3",
-    "husky": "5.0.9"
+    "husky": "^7.0.4"
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
-  ],
-  "main": "index.js",
-  "license": "MIT",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "keywords": [],
-  "author": ""
+  ]
 }

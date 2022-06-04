@@ -8,7 +8,6 @@ import { BlogCard } from "./BlogCard";
 const Index = () => {
   const navigate = useNavigate();
   const auth = JSON.parse(localStorage.getItem("auth"));
-  console.log("Auth: ", auth);
 
   const [blogs, setBLogs] = useState([]);
   const [count, setCount] = useState(0);
@@ -60,7 +59,7 @@ const Index = () => {
     <div className="admin-users">
       <div className="header-div">
         <div className="header-title">
-          <h5>All Blogs</h5>
+          <h5 className="dispaly-4 fw-bold mx-5">All Blogs</h5>
         </div>
         <div>
           <Button

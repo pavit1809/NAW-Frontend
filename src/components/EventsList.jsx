@@ -17,7 +17,6 @@ import axios from "axios";
 const EventsList = ({ navigationPath }) => {
   const [events, setEvents] = useState([]);
   const [count, setCount] = useState(0);
-  console.log("Navigation Path in EventsList: ", navigationPath);
 
   useEffect(() => {
     axios
@@ -42,7 +41,94 @@ const EventsList = ({ navigationPath }) => {
       .catch((error) => console.log(error));
   };
 
-  return events != null ? (
+  // const events = [
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  //   {
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     action: "Get Tickets",
+  //   },
+  // ];
+
+  return (
     <Container disableGutters>
       <Grid container justifyContent={"space-between"} mb={3}>
         <Paper
@@ -92,8 +178,6 @@ const EventsList = ({ navigationPath }) => {
       </Grid>
       <Grid className="event-card" container justifyContent={"space-between"}>
         {events.map((event) => {
-          // navigationPath = `/events/${event.id}`;
-          // console.log("Navigation Path: ", navigationPath);
           return (
             <Grid key={event.id} sx={{ my: 2 }}>
               <EventCard
@@ -123,8 +207,6 @@ const EventsList = ({ navigationPath }) => {
         />
       </Grid>
     </Container>
-  ) : (
-    Loading
   );
 };
 

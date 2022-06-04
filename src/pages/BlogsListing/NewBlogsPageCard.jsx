@@ -8,20 +8,12 @@ import {
   IconButton,
 } from "@mui/material";
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
-import eventPhoto from "../../assets/images/EventPhoto.png";
+import EventPhoto from "../../assets/images/EventPhoto.png";
 import Author from "../../assets/images/author.png";
 import BlogsArrowButton from "../../assets/images/BlogsArrowButton.png";
 import "./Blogs.css";
 
-export default function NewBlogsPageCard({
-  id,
-  EventPhoto,
-  title,
-  navigationLink,
-}) {
-  const navigate = useNavigate();
-
+export default function NewBlogsPageCard() {
   return (
     <Container disableGutters>
       <Card
@@ -33,7 +25,7 @@ export default function NewBlogsPageCard({
         }}
       >
         <Box>
-          <img src={EventPhoto} alt="eventPhoto" width="230px" height="150px" />
+          <img src={EventPhoto} alt="eventphoto" width="230px" height="150px" />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Box sx={{ display: "flex", marginLeft: "10px" }}>
@@ -48,7 +40,7 @@ export default function NewBlogsPageCard({
                   }}
                 >
                   <Typography variant={"p"} fontSize={"16px"} color={"#353535"}>
-                    {title}
+                    Bill Smith
                   </Typography>
                 </Paper>
                 <Paper>
@@ -96,9 +88,6 @@ export default function NewBlogsPageCard({
             <Button
               className="button-readmore"
               sx={{ paddingLeft: "0px", fontSize: "14px", color: "#3670f8" }}
-              onClick={() => {
-                navigate(`${navigationLink}`);
-              }}
             >
               Read more
               <IconButton paddingLeft="0px">

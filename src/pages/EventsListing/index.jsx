@@ -62,7 +62,7 @@ export default function EventsListing() {
         </Grid>
       </Container>
       <VirtualSummit />
-      <EventsList />
+      <EventsList navigationPath="/sign-in" />
       <SubscriptionPanel />
     </>
   );

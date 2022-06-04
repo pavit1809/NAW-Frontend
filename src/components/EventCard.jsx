@@ -16,6 +16,7 @@ import {
 } from "@mui/icons-material";
 import "../pages/Home/Home.css";
 import { useNavigate } from "react-router-dom";
+// import PopOver from "../pages/EventsListing/PopOver";
 
 export default function EventCard({
   id,
@@ -31,6 +32,10 @@ export default function EventCard({
   navigationPath,
 }) {
   const navigate = useNavigate();
+
+  // const redirectToEventDetails => (id) {
+
+  // }
 
   return (
     <Card
@@ -109,7 +114,13 @@ export default function EventCard({
             component="a"
             underline="none"
             sx={{ color: "#3874FF !important", pl: "0 !important" }}
-            onClick={() => handleNext(id)}
+            onClick={() =>
+              navigate(`${navigationPath}`, {
+                EventId: id,
+              })
+              // <PopOver />
+            }
+            // onClick={() => (window.location.href = `/events/${id}`)}
             endIcon={<ArrowForward sx={{ color: "#3874FF !important" }} />}
           >
             {action}

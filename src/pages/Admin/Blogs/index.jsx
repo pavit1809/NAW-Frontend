@@ -8,6 +8,7 @@ import { BlogCard } from "./BlogCard";
 const Index = () => {
   const navigate = useNavigate();
   const auth = JSON.parse(localStorage.getItem("auth"));
+  console.log("Auth: ", auth);
 
   const [blogs, setBLogs] = useState([]);
   const [count, setCount] = useState(0);

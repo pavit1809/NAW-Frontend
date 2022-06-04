@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdCard from "./AdCard";
-
+import {Container} from 'react-bootstrap';
 const Index = () => {
   const navigate = useNavigate();
 
@@ -37,10 +37,12 @@ const Index = () => {
   };
 
   return (
+    <>
+    <Container>
     <div className="admin-users">
       <div className="header-div">
         <div className="header-title">
-          <h5>Ads</h5>
+          <h5 className="fw-bold display-4">Ads</h5>
         </div>
         <div>
           <Button
@@ -76,6 +78,8 @@ const Index = () => {
       </Grid>
       {/* </Container> */}
     </div>
+    </Container>
+    </>
   );
 };
 

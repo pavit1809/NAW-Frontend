@@ -10,7 +10,7 @@
   z-index: 99;
   padding-left: 64px;
   padding-right: 59px;
-  background-color: #ebf0fe;
+ 
 }
 
 .admin-header .left-side {
@@ -41,4 +41,24 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media(max-width: 768px){
+  .admin-header{
+    display: block;
+    flex-direction: column;
+    left: 0;
+    padding-left: 5rem;
+    
+  }
+  .admin-header .left-side {
+    width: 100%;
+  }
+  .admin-header .left-side .admin-dash-header-searchbar input {
+    width: 300px;
+    
+  }
+  .admin-header .user-info-container  {
+    width: 300px;
+    margin-top: 0.4rem;
+  }
 }

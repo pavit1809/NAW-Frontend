@@ -8,7 +8,6 @@ import Membership from "./pages/Membership";
 import EventsListing from "./pages/EventsListing";
 import EventDetails from "./pages/EventsListing/EventDetails";
 import BlogsListing from "./pages/BlogsListing";
-import NewBlogs from "./pages/BlogsListing/NewBlogs";
 import BlogDetails from "./pages/BlogsListing/BlogDetails";
 import Products from "./pages/Products";
 import SignIn from "./pages/SignIn";
@@ -21,6 +20,7 @@ import CheckOut from "./pages/CheckOut";
 import UpcomingEvents from "./pages/UpcomingEvents";
 import AdminLayout from "./pages/Admin/";
 import Connections from "./pages/Connections/";
+import NewBlogs from "./pages/BlogsListing/NewBlogs";
 import UserEventDetails from "./pages/UpcomingEvents/EventDetails";
 import UserEventCardDetails from "./pages/UpcomingEvents/EventDetailsCard";
 import Feedback from "./pages/FrontPages";
@@ -28,7 +28,6 @@ import EventCheckout from "./pages/FrontPages/EventCheckout";
 import EventAttendees from "./pages/UpcomingEvents/EventAttendees";
 import EventRegistrations from "./pages/UpcomingEvents/EventRegistrations";
 import Inbox from "./pages/UpcomingEvents/inbox";
-import FeedBack from "./pages/Feedback";
 
 // ----------------------------------------------------------------------
 export default function Router() {
@@ -57,7 +56,6 @@ export default function Router() {
         { path: "event-attendees", element: <EventAttendees /> },
         { path: "event-registrations", element: <EventRegistrations /> },
         { path: "inbox", element: <Inbox /> },
-        { path: "feedback", element: <FeedBack /> },
       ],
     },
     {
@@ -69,7 +67,6 @@ export default function Router() {
         { path: "membership", element: <Membership /> },
         { path: "events", element: <EventsListing /> },
         { path: "events/:eventID", element: <EventDetails /> },
-        // { path: "blogs", element: <BlogsListing /> },
         { path: "blogs", element: <BlogsListing /> },
         { path: "blogs/:blogID", element: <BlogDetails /> },
         { path: "products", element: <Products /> },

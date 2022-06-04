@@ -30,6 +30,19 @@ const UserEventDetails = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  // const eventDetails = {
+  //   image: EventPhoto,
+  //   date: "November 17, 2021",
+  //   time: "06 PM - 08 PM EST",
+  //   title: "Network After Work Houston",
+  //   action: "Get Tickets",
+  //   price: "Free for members",
+  //   membership: "$39 to attend all events for free",
+  //   category: "In-Person Networking Events",
+  //   tags: "Networking",
+  //   address: "1197 Peachtree St NE, Atlanta, GA",
+  // };
+
   return (
     <Container className="container-xl">
       <Typography variant="h3" className="section-title mt-0">
@@ -127,15 +140,6 @@ const UserEventDetails = () => {
               </Typography>
             </Grid>
           </Grid>
-
-          <Button
-            variant="contained"
-            onClick={() => {
-              navigate(`/d/checkout`);
-            }}
-          >
-            Checkout
-          </Button>
 
           {/* <Grid container direction={"column"}>
             <Table sx={{ border: "none" }} aria-label="caption table">

@@ -5,6 +5,7 @@ import rowTwoTwo from "../../../assets/admin-images/row-two-two.png";
 import rowTwoThree from "../../../assets/admin-images/row-two-three.png";
 import "./events.css";
 import { useNavigate } from "react-router-dom";
+import {Container, Card, Row, Col, Image} from 'react-bootstrap';
 import { Button } from "@mui/material";
 
 function Index() {
@@ -12,11 +13,18 @@ function Index() {
 
   return (
     <div className="admin-users">
+      <Container>
       <div className="header-title">Events</div>
-      <div className="events-row-one">
-        <div className="row-one-one">
+      {/* <div className="events-row-one"> */}
+      <Card>
+        <Card.Body>
+          <Row>
+            <Col md={6}>
+        <div className="d-flex justify-content-center">
           <img src={imageOne} alt="/events-row-one" />
         </div>
+        </Col>
+        <Col md={6}>
         <div className="row-one-two">
           <p>Change Events</p>
           <button
@@ -26,22 +34,37 @@ function Index() {
             Create New Events
           </button>
         </div>
-      </div>
-      <div className="events-row-two">
-        <div className="row-two">
-          <div className="row-two-image">
-            <img src={rowTwoOne} alt="row-two-one" />
-          </div>
+        </Col>
+        </Row>
+        </Card.Body>
+        </Card>
+        <Container className="mt-5 event-card">
+          <Row>
+            <Col md={4}>
+              <Card>
+                <Card.Body>
+      {/* </div> */}
+      {/* <div className="events-row-two"> */}
+        {/* <div className="row-two"> */}
+          {/* <div className="row-two-image"> */}
+            <Card.Img src={rowTwoOne} alt="row-two-one" />
+          {/* </div> */}
           <div className="row-two-para">
             <Button onClick={() => navigate("/admin/events/event-details")}>
               Free Events
             </Button>
           </div>
-        </div>
-        <div className="row-two">
-          <div className="row-two-image">
-            <img src={rowTwoTwo} alt="row-two-two" />
-          </div>
+          </Card.Body>
+          </Card>
+          </Col>
+          <Col md={4}>
+              <Card>
+                <Card.Body>
+        {/* </div> */}
+        {/* <div className="row-two"> */}
+          {/* <div className="row-two-image"> */}
+            <Card.Img src={rowTwoTwo} alt="row-two-two" />
+          {/* </div> */}
           <div className="row-two-para">
             <Button
               onClick={() => navigate("/admin/events/event-details-paid")}
@@ -49,11 +72,17 @@ function Index() {
               Paid Events of $39 Membership
             </Button>
           </div>
-        </div>
-        <div className="row-two">
-          <div className="row-two-image">
-            <img src={rowTwoThree} alt="row-two-three" />
-          </div>
+          </Card.Body>
+          </Card>
+          </Col>
+          <Col md={4}>
+              <Card>
+                <Card.Body>
+        {/* </div> */}
+        {/* <div className="row-two">
+          <div className="row-two-image"> */}
+            <Card.Img src={rowTwoThree} alt="row-two-three" />
+          {/* </div> */}
           <div className="row-two-para">
             <Button
               onClick={() => navigate("/admin/events/event-details-paid2")}
@@ -61,8 +90,14 @@ function Index() {
               Paid Events of $199 Membership
             </Button>
           </div>
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
+      </Card.Body>
+        </Card>
+          </Col>
+      </Row>
+      </Container>
+      </Container>
     </div>
   );
 }

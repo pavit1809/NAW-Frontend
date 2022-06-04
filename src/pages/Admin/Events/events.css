@@ -5,14 +5,29 @@
   display: flex;
   justify-content: space-evenly;
 }
-.events-row-one .row-one-two p {
+.row-one-one 
+{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row-one-two {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.event-card .row .col-md-4 .card .card-body img {
+  height: 40vh;
+}
+.row-one-two p {
   font-size: 26px;
   font-weight: 700;
   line-height: 60px;
   display: flex;
   justify-content: center;
 }
-.events-row-one .row-one-two button {
+ .row-one-two button {
   background: #3670f8;
   border-radius: 6px;
   color: #fff;

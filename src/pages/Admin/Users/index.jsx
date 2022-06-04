@@ -4,6 +4,7 @@ import userBanner from "../../../assets/admin-images/user-banner.png";
 import UserList from "./UserList";
 import arrowDown from "../../../assets/admin-images/arrow-down.png";
 import { Button } from "@mui/material";
+import {Container, Row, Col, Image, Card, Table} from 'react-bootstrap';
 import axios from "axios";
 
 const Users = () => {
@@ -42,15 +43,24 @@ const Users = () => {
 
   return (
     <div className="admin-users">
+      <Container>
       <div className="header-title">Users</div>
-      <div className="add-user-banner">
+      {/* <div className="add-user-banner"> */}
+      <Card>
+        <Card.Body>
+
+
+      <Row>
+        <Col lg={6}>
         <img
           src={userBanner}
           className="add-user-banner-img"
           alt="user author"
         />
+        </Col>
+        <Col lg={6}>
         <div className="add-user-banner-content">
-          <span className="add-user-banner-title">Add New Users</span>
+        <h4 className='text-center mt-5 fw-bold'>Add New Users</h4>
           <div className="file-upload">
             {/* <input type="file" style={{ display: "none" }} /> */}
             <span className="file-upload-placeholder">
@@ -72,11 +82,15 @@ const Users = () => {
             </Button>
           </div>
         </div>
-      </div>
+        </Col>
+        </Row>
+        </Card.Body>
+      </Card>
+      {/* </div> */}
       <div className="manage-users-section">
         <div className="manage-title">Manage All Users</div>
         <div className="list-users-title">List of csv Files of users</div>
-        <div className="user-list-container">
+        {/* <div className="user-list-container">
           {usersList && usersList.length
             ? usersList.map((item) => (
                 <UserList
@@ -96,8 +110,40 @@ const Users = () => {
               alt="arrow down"
             />
           </span>
+        </div> */}
+        <Container style={{overflowX:"scroll"}} className="bg-light">
+          <Table responsive>
+            <tbody>
+          
+            {usersList && usersList.length
+            ? usersList.map((item) => (
+                <tr>
+                  <td>
+                  <UserList
+                  key={item.id}
+                  userData={item}
+                  deleteClick={handleDeleteClick}
+                  />
+                  </td>
+                  </tr>
+              ))
+            : null}
+       
+            </tbody>
+          </Table>
+          <div className="view-more-btn-container">
+          <span className="view-more-btn">
+            View More{" "}
+            <img
+              src={arrowDown}
+              style={{ transform: "rotate(-90deg)", marginLeft: 5 }}
+              alt="arrow down"
+            />
+          </span>
         </div>
+        </Container>
       </div>
+      </Container>
     </div>
   );
 };

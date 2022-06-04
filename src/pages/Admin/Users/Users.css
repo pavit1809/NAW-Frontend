@@ -1,4 +1,5 @@
 .admin-users {
+  margin-top: 7rem;
 }
 
 .admin-users .header-title {
@@ -12,7 +13,7 @@
   border-radius: 10px;
   height: 266px;
   background-color: white;
-  display: flex;
+ 
   align-items: center;
   overflow: hidden;
   padding-left: 46px;
@@ -36,7 +37,7 @@
   font-weight: 700;
 }
 
-.admin-users .add-user-banner .file-upload {
+/* .admin-users .add-user-banner */ .file-upload { 
   height: 50px;
   width: 393px;
   border: 1px solid rgba(228, 228, 228, 0.9);
@@ -47,9 +48,10 @@
   padding-left: 20px;
   padding-right: 10px;
   margin-top: 34px;
+  margin-left: 2rem;
 }
 
-.admin-users .add-user-banner .file-upload .file-upload-btn {
+/* .admin-users .add-user-banner*/ .file-upload .file-upload-btn { 
   background: #3670f8;
   border-radius: 6px;
   display: inline-flex;
@@ -88,18 +90,17 @@
 
 .admin-users .manage-users-section .user-list-card {
   width: 100%;
-  min-height: 80px;
+  height: 80px;
   border-radius: 10px;
-  padding: 22px 35px;
+  padding-left: 35px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   background-color: #fff;
   margin-bottom: 2px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.admin-users .manage-users-section .user-list-card .action-icon {
-  margin-left: 58px;
-}
+
 .admin-users .manage-users-section .user-list-card .user-icon {
   margin-right: 18px;
 }
@@ -132,18 +133,12 @@
   width: 240px;
 }
 
-.user-list-card .user-image-name {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
 .admin-users .manage-users-section .user-list-card .user-action-div {
   display: flex;
   align-items: center;
   color: #3770f5;
   font-size: 14px;
+  padding: 1rem;
 }
 
 .admin-users .view-more-btn-container {
@@ -244,20 +239,9 @@
   margin-bottom: 20px;
   outline: none;
 }
-
-@media (max-width: 1366px) {
-  .admin-users .manage-users-section .user-list-card .action-icon {
-    margin-left: 20px;
-    margin-right: 6px !important;
-  }
-}
-@media (max-width: 1199px) {
-  .admin-users .manage-users-section .user-list-card {
-    flex-wrap: wrap;
-  }
-  .admin-users .manage-users-section .user-list-card .user-action-div {
-    padding-top: 16px;
-    min-width: 100%;
-    justify-content: flex-end;
+@media(max-width:992px){
+  .file-upload { 
+    margin-left: 0;
+    width: 100%;
   }
 }

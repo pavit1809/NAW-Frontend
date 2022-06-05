@@ -12,6 +12,7 @@ import GoogleIcon from "./../../assets/images/Google__G__Logo.svg";
 import FacebookIcon from "@mui/icons-material/FacebookTwoTone";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer , toast} from "react-toastify";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -53,11 +54,13 @@ export default function SignIn() {
           console.log(error.response.data.status);
           setValidationErrors(true);
           setValidationMessage(error.response.data.status.detail.user);
+          toast.error("")
         }
       });
   };
   return (
     <Box component="main" flexGrow={1} className="auth-signup">
+      <ToastContainer position="top-center" />
       <CssBaseline />
       <AuthTemplate>
         <Box

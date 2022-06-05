@@ -140,14 +140,7 @@ const UserEventDetails = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Button
-            variant="contained"
-            onClick={() => {
-              navigate(`/d/event-checkout`);
-            }}
-          >
-            Checkout
-          </Button>
+
           {/* <Grid container direction={"column"}>
             <Table sx={{ border: "none" }} aria-label="caption table">
               <TableBody>

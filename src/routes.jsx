@@ -28,9 +28,6 @@ import EventCheckout from "./pages/FrontPages/EventCheckout";
 import EventAttendees from "./pages/UpcomingEvents/EventAttendees";
 import EventRegistrations from "./pages/UpcomingEvents/EventRegistrations";
 import Inbox from "./pages/UpcomingEvents/inbox";
-import FeedBack from "./pages/Feedback";
-// import EventCheckout from "./pages/UpcomingEvents/EventCheckout";
-
 
 // ----------------------------------------------------------------------
 export default function Router() {
@@ -59,9 +56,6 @@ export default function Router() {
         { path: "event-attendees", element: <EventAttendees /> },
         { path: "event-registrations", element: <EventRegistrations /> },
         { path: "inbox", element: <Inbox /> },
-        { path: "feedback", element: <FeedBack /> },
-        { path: "event-checkout", element: <EventCheckout /> },
-        { path: "event-attendees", element: <EventAttendees /> },
       ],
     },
     {

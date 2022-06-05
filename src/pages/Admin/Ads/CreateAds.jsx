@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
 import moment from "moment";
 // import imageAd from "../../../assets/admin-images/ad-image.png";
 import imageOne from "../../../assets/admin-images/membership-row-one.png";
 import "./Ads.css";
 import { Button } from "@mui/material";
+import {Container} from "react-bootstrap";
 
 const CreateAds = () => {
   const navigate = useNavigate();
@@ -39,7 +41,9 @@ const CreateAds = () => {
       })
       .then((response) => {
         if (response.status >= 200 && response.status < 210)
+        
           navigate("/admin/ads", {
+            
             state: {
               EventId: "",
               BlogId: "",
@@ -48,12 +52,18 @@ const CreateAds = () => {
               AdId: "",
             },
           });
+         
+            
       })
       .catch((error) => console.log(error));
+      
+      
   };
 
   return (
     <div className="admin-users">
+      <ToastContainer />
+      <Container>
       <div className="header-title">Ads</div>
       <div className="ad-rows">
         <div className="ad-row-one">
@@ -148,6 +158,7 @@ const CreateAds = () => {
           <img src={imageOne} alt="ads" />
         </div>
       </div>
+      </Container>
     </div>
   );
 };

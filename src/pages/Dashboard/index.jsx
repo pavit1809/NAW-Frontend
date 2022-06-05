@@ -66,6 +66,10 @@ const Dashboard = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const handleOnClick = (e) => {
+    
+  }
+
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
@@ -144,16 +148,13 @@ const Dashboard = () => {
                   variant="h4"
                   className="section-title normal-font m-0"
                 >
-                  $39
-                </Typography>
-                <Typography variant="p" className="text-black" sx={{ mt: 1 }}>
-                  per year
+                  FREE
                 </Typography>
                 <List className="price-list">
                   <ListItem disablePadding className="label-list">
                     <ListItemButton>
                       <ListItemIcon>
-                        <CheckCircleOutlineIcon className="check-icon" />
+                        <CloseIcon className="close-icon" />
                       </ListItemIcon>
                       <ListItemText primary="All Live Events" />
                     </ListItemButton>
@@ -195,6 +196,7 @@ const Dashboard = () => {
                   variant="contained"
                   my={2}
                   className="shadow-btn checkout-btn"
+                  onClick={handleOnClick}
                   fullWidth
                 >
                   Get Started
@@ -202,12 +204,15 @@ const Dashboard = () => {
               </Box>
             </Grid>
             <Grid item xs={12} sm={4} md={4}>
-              <Box sx={{ textAlign: "center" }} className="plan-box  selected">
+              <Box sx={{ textAlign: "center" }} className="plan-box">
+                <Typography variant="p" className="text-black" sx={{ mt: 1 }}>
+                  All Rounder
+                </Typography>
                 <Typography
                   variant="h4"
                   className="section-title normal-font m-0"
                 >
-                  $39
+                  $199
                 </Typography>
                 <Typography variant="p" className="text-black" sx={{ mt: 1 }}>
                   per year
@@ -224,7 +229,7 @@ const Dashboard = () => {
                   <ListItem disablePadding className="label-list">
                     <ListItemButton>
                       <ListItemIcon>
-                        <CloseIcon className="close-icon" />
+                        <CheckCircleOutlineIcon className="check-icon" />
                       </ListItemIcon>
                       <ListItemText primary="Guests Lists for events" />
                     </ListItemButton>
@@ -232,7 +237,7 @@ const Dashboard = () => {
                   <ListItem disablePadding className="label-list">
                     <ListItemButton>
                       <ListItemIcon>
-                        <CloseIcon className="close-icon" />
+                        <CheckCircleOutlineIcon className="check-icon" />
                       </ListItemIcon>
                       <ListItemText primary="Get Notifications" />
                     </ListItemButton>
@@ -240,7 +245,7 @@ const Dashboard = () => {
                   <ListItem disablePadding className="label-list">
                     <ListItemButton>
                       <ListItemIcon>
-                        <CloseIcon className="close-icon" />
+                        <CheckCircleOutlineIcon className="check-icon" />
                       </ListItemIcon>
                       <ListItemText primary="Get Data of Buying anf Selling" />
                     </ListItemButton>
@@ -248,7 +253,7 @@ const Dashboard = () => {
                   <ListItem disablePadding className="label-list">
                     <ListItemButton>
                       <ListItemIcon>
-                        <CloseIcon className="close-icon" />
+                        <CheckCircleOutlineIcon className="check-icon" />
                       </ListItemIcon>
                       <ListItemText primary="Access to More Lcations" />
                     </ListItemButton>
@@ -258,6 +263,7 @@ const Dashboard = () => {
                   variant="contained"
                   my={2}
                   className="shadow-btn checkout-btn"
+                  onClick={handleOnClick}
                   fullWidth
                 >
                   Get Started
@@ -321,6 +327,7 @@ const Dashboard = () => {
                   variant="contained"
                   my={2}
                   className="shadow-btn checkout-btn"
+                  onClick={handleOnClick}
                   fullWidth
                 >
                   Get Started

@@ -53,7 +53,7 @@ const Index = () => {
           <br></br>
           <button
             style={{ cursor: "pointer" }}
-            onClick={() => handleEdit(item.id)}
+            onClick={() => handleEdit(membership.id)}
           >
             Edit Membership
           </button>

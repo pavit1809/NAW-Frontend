@@ -53,9 +53,13 @@ const style = {
 const Dashboard = () => {
   const auth = JSON.parse(localStorage.getItem("auth"));
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
   const navigate = useNavigate();
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     axios
@@ -212,6 +216,9 @@ const Dashboard = () => {
                   my={2}
                   className="shadow-btn checkout-btn"
                   fullWidth
+                  onClick={() => {
+                    navigate("/d/checkout");
+                  }}
                 >
                   Get Started
                 </Button>
@@ -275,6 +282,9 @@ const Dashboard = () => {
                   my={2}
                   className="shadow-btn checkout-btn"
                   fullWidth
+                  onClick={() => {
+                    navigate("/d/checkout");
+                  }}
                 >
                   Get Started
                 </Button>
@@ -338,6 +348,9 @@ const Dashboard = () => {
                   my={2}
                   className="shadow-btn checkout-btn"
                   fullWidth
+                  onClick={() => {
+                    navigate("/d/checkout");
+                  }}
                 >
                   Get Started
                 </Button>

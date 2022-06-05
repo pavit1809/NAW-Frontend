@@ -131,7 +131,7 @@ const UserEventDetails = () => {
           <Button
             variant="contained"
             onClick={() => {
-              navigate(`/d/checkout`);
+              navigate(`/d/event-checkout`);
             }}
           >
             Checkout

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./dashboard.css";
 import EventsLists from "./EventsLists";
+import {Container, Row, Col, Card} from 'react-bootstrap'
 import {
   Bar,
   BarChart,
@@ -12,7 +13,9 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ResponsiveContainer
 } from "recharts";
+
 
 function Dashboard() {
   const [events, setEvents] = useState([]);
@@ -55,35 +58,58 @@ function Dashboard() {
   }, []);
   return (
     <div className="admin-dashboard">
+      <Container>
       <div className="header-title">Dashboard</div>
-      <div className="events-section">
-        <div className="left-section">
+
+      {/* <div className="events-section"> */}
+       
+        {/* <div className="left-section"> */}
+       
+        
           <span className="section-title">Events</span>
-          <div className="section-body">
+          {/* <div className="section-body"> */}
+          <Row>
+          <Col lg={7} sm={6}>
+          <Card>
+            <Card.Body>
             {events.map((item, index) => (
               <EventsLists key={index} data={item} />
             ))}
+            </Card.Body>
+            </Card>
+            </Col>
+            
             {/* <EventsLists />
             <EventsLists />
             <EventsLists />
             <EventsLists /> */}
-          </div>
-        </div>
-        <div className="right-section">
-          <span className="section-title">Membership</span>
-          <div className="section-body">
-            <LineChart width={530} height={300} data={data}>
+          {/* </div> */}
+          
+        {/* </div> */}
+        <Col lg={5} sm={6}>
+        {/* <div className="right-section"> */}
+        <span className='section-title '>Membership</span>
+          {/* <div className="section-body"> */}
+          <ResponsiveContainer width="100%" height="50%" className=' bg-white' strokeDasharray  >
+            <LineChart width={530} height={100} data={data}>
               <XAxis dataKey="name" />
               <YAxis />
               <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
               <Line type="monotone" dataKey="Decrease" stroke="#A93BFF" />
             </LineChart>
-          </div>
-        </div>
-      </div>
+            </ResponsiveContainer>
+          {/* </div>
+         
+        </div> */}
+        </Col>
+        </Row>
+       
+        
+      {/* </div> */}
       <div className="membership-section">
-        <span className="section-title">Membership Categories</span>
-        <div className="section-container">
+        {/* <span className="section-title">Membership Categories</span> */}
+        {/* <div className="section-container"> */}
+        {/* <Row>
           <div className="section-body">
             <BarChart width={400} height={250} data={data}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -117,8 +143,80 @@ function Dashboard() {
               <Bar dataKey="Decrease" fill="#E6E8EC" />
             </BarChart>
           </div>
+          </Row> */}
         </div>
-      </div>
+        <Row>
+      <span className='section-title mt-3 mb-3'>Membership Categories</span>
+        <Col lg={4} sm={6}>
+        <ResponsiveContainer width="100%" height="90%" className='mt-4 bg-white' strokeDasharray  >
+        <BarChart
+      width={500}
+      height={300}
+      data={data}
+      margin={{
+        top: 5,
+        right: 30,
+        bottom: 5
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" />
+      <YAxis  />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey="Increase" fill="#5ACFCF" />
+      <Bar dataKey="Decrease" fill="#E6E8EC" />
+    </BarChart>
+        </ResponsiveContainer>
+        </Col>
+        <Col lg={4} sm={6}>
+        <ResponsiveContainer width="100%" height="90%" className='mt-4 bg-white' strokeDasharray  >
+        <BarChart
+      width={500}
+      height={300}
+      data={data}
+      margin={{
+        top: 10,
+        right: 30,
+        bottom: 5
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" />
+      <YAxis  />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey="Increase" fill="#5ACFCF" />
+      <Bar dataKey="Decrease" fill="#E6E8EC" />
+    </BarChart>
+        </ResponsiveContainer>
+        </Col>
+        <Col lg={4} sm={6}>
+        <ResponsiveContainer width="100%" height="90%" className='mt-4 bg-white' strokeDasharray  >
+        <BarChart
+      width={500}
+      height={300}
+      data={data}
+      margin={{
+        top: 5,
+        right: 30,
+        bottom: 5
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" />
+      <YAxis  />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey="Increase" fill="#5ACFCF" />
+      <Bar dataKey="Decrease" fill="#E6E8EC" />
+    </BarChart>
+        </ResponsiveContainer>
+      </Col>
+      </Row>
+      {/* </div> */}
+      
+      </Container>
     </div>
   );
 }

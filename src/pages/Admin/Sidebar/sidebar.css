@@ -1,23 +1,24 @@
 .admin-sidebar {
-  width: 295px;
-  height: 200vh;
+  
+  width: 295px; 
+  /* height: 200vh; */
   background-color: white;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
+  align-items: center; */
+  /* padding-top: 40px;
   padding-left: 13px;
-  padding-right: 13px;
+  padding-right: 13px; */
   box-shadow: 4px 0px 30px rgba(33, 123, 244, 0.15);
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   top: 0;
-  z-index: 100;
+  /* z-index: 100; */
   opacity: 1;
 }
 
 .admin-sidebar .drawer-menu-container {
-  margin-top: 80px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -41,4 +42,82 @@
   font-size: 17px;
   font-weight: 600;
   margin-left: 15px;
+}
+.toggle{
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background: #ffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+  border-radius: 10px;
+  display: flex;
+  transform: scale(0.6);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 1s;
+  overflow: hidden;
+  z-index: 110;
+}
+
+.toggle span{
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background: #1863ff;
+  border-radius: 4px;
+left: 15px;
+  transition: 0.5s;
+animation: middle_loader 1.5s ease infinite;
+}
+.toggle span:nth-child(1){
+  transform: translateY(-15px);
+  width: 15px;
+  left: 15px;
+animation: loader 1.6s ease infinite;
+}
+
+.toggle span:nth-child(2){
+  transform: translateY(15px);
+  width: 15px;
+  left: 15px;
+animation: loader 1.6s ease infinite;
+}
+
+/*Styling the active class*/
+.toggle.active{
+  background-color: #1863ff;
+}
+
+.toggle.active span{
+  background: #ffff;
+}
+
+.toggle.active span:nth-child(1){
+  width: 40px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+}
+
+.toggle.active span:nth-child(2){
+  width: 40px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.25s;
+}
+
+.toggle.active span:nth-child(3){
+  transform: translateX(60px); 
+}
+
+/*Keyframes*/
+@keyframes loader{
+50%{
+  width: 40px;
+}
+}
+
+@keyframes middle_loader{
+75%{
+  width: 40px;
+}
 }

@@ -23,8 +23,7 @@ const EventDetails = () => {
     state: { EventId },
   } = useLocation();
   const auth = JSON.parse(localStorage.getItem("auth"));
-  console.log("Auth:", auth);
-  const [eventDetails, setEventDetails] = useState([]);
+  // const [eventDetails, setEventDetails] = useState([]);
 
   useEffect(() => {
     axios
@@ -35,15 +34,26 @@ const EventDetails = () => {
       })
       .then((response) => {
         if (response.status >= 200 && response.status < 210)
-          setEventDetails(response);
-        console.log("Response:", response);
+          // setEventDetails(response.data.data);
+          console.log(response);
       })
       .catch((error) => console.log(error));
-    console.log("Started Event Details");
   }, []);
 
+  const eventDetails = {
+    image: EventPhoto,
+    date: "November 17, 2021",
+    time: "06 PM - 08 PM EST",
+    title: "Network After Work Houston",
+    action: "Get Tickets",
+    price: "Free for members",
+    membership: "$39 to attend all events for free",
+    category: "In-Person Networking Events",
+    tags: "Networking",
+    address: "1197 Peachtree St NE, Atlanta, GA",
+  };
+
   return (
-    // <h1>Event Details</h1>
     <Container sx={{ my: 15 }}>
       <Grid container justifyContent={"space-evenly"}>
         <Grid item>
@@ -182,9 +192,9 @@ const EventDetails = () => {
             <Button variant="contained" sx={{ my: 2, width: "100%" }}>
               First Time - Register Here
             </Button>
-            {/* <Button variant="contained" sx={{ my: 2, width: "100%" }}>
+            <Button variant="contained" sx={{ my: 2, width: "100%" }}>
               First Time - Register Here
-            </Button> */}
+            </Button>
           </Grid>
         </Grid>
       </Grid>
@@ -254,9 +264,5 @@ const EventDetails = () => {
     </Container>
   );
 };
-
-// const EventDetails = () => {
-//   return <h1>Event Details</h1>;
-// };
 
 export default EventDetails;

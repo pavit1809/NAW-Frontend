@@ -21,7 +21,6 @@ import axios from "axios";
 import { Box } from "@mui/system";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import BlogsCard from "../pages/BlogsListing/NewBlogsPageCard";
 
 const BlogsList = () => {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ const BlogsList = () => {
     axios
       .get("blog/")
       .then((response) => {
-        console.log(response.data.data);
+        console.log(response);
         setBlogs(response.data.data);
       })
       .catch((error) => console.log(error));
@@ -40,7 +39,116 @@ const BlogsList = () => {
   const showBlogDetails = (blogID) => {
     navigate(`/blogs/${blogID}`);
   };
-
+  // const blogs = [
+  //   {
+  //     id: 1,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 2,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 3,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 4,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 5,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 6,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 7,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 8,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 9,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 10,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 11,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  //   {
+  //     id: 12,
+  //     image: EventPhoto,
+  //     date: "November 17, 2021",
+  //     time: "06 PM - 08 PM EST",
+  //     title: "Network After Work Houston",
+  //     actionLabel: "Read More",
+  //     author: { icon: AuthorIcon, name: "Robert Maldonado" },
+  //   },
+  // ];
   return (
     <Container maxWidth="xl" sx={{ my: 9 }}>
       <Grid
@@ -202,22 +310,624 @@ const BlogsList = () => {
             );
           })} */}
           <Box className="blog-scroller">
-            {blogs.map((blog) => {
-              const navigationLink = `/blogs/${blog.id}`;
-              console.log(blog);
-              return (
-                <BlogsCard
-                  id={blog.id}
-                  EventPhoto={blog.banner}
-                  title={blog.title}
-                  navigationLink={navigationLink}
-                />
-              );
-            })}
-            {/* <BlogsCard />
-            <BlogsCard />
-            <BlogsCard />
-            <BlogsCard /> */}
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+            <Card className="blog-column-card">
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid xs={12} sm={5} xl={6} item>
+                    <img src={EventPhoto} alt="" />
+                  </Grid>
+                  <Grid xs={12} sm={7} xl={6} item>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <Avatar>
+                        <img src={AvatarImg} alt="" />
+                      </Avatar>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          paddingLeft: "15px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            width: "100%",
+                          }}
+                        >
+                          <ListItemText
+                            primary="Bill Smith"
+                            secondary="9650 Followers"
+                          />
+                          <Chip
+                            label="Follow"
+                            variant="outlined"
+                            sx={{
+                              border: "1px solid",
+                              color: "#989898",
+                              borderRadius: "4px",
+                              padding: "1px 5px",
+                              fontSize: "12px",
+                              height: "28px",
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <CalendarMonthIcon className="date-icon" />
+                          <Box>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                                margin: "2px 0 1px",
+                              }}
+                            >
+                              October 17, 2021
+                            </Typography>
+                            <Typography
+                              variant="p"
+                              sx={{
+                                fontSize: "12px",
+                                color: "#B4B4B4",
+                              }}
+                            >
+                              10 min read
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontSize: "18px !important",
+                        color: "#000",
+                        fontWeight: "600",
+                        margin: "8px 0",
+                      }}
+                    >
+                      Seceret Behind Success
+                    </Typography>
+                    <Button
+                      variant="text"
+                      endIcon={<ArrowRightAltIcon />}
+                      sx={{
+                        padding: "0",
+                      }}
+                    >
+                      Read More
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
           </Box>
         </Grid>
       </Grid>

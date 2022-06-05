@@ -6,6 +6,7 @@ import imageOne from "../../../assets/admin-images/membership-row-one.png";
 import "./membership.css";
 import MembershipCard from "./MembershipCard";
 import { useNavigate } from "react-router-dom";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -29,11 +30,18 @@ const Index = () => {
 
   return (
     <div className="admin-users">
+      <Container fluid>
       <div className="header-title">Membership</div>
-      <div className="membership-row-one">
-        <div className="row-one-one">
+      {/* <div className="membership-row-one"> */}
+      <Card>
+        <Card.Body>
+          <Row>
+            <Col md={6}>
+        <div className="d-flex justify-content-center">
           <img src={imageOne} alt="/membership-row-one" />
         </div>
+        </Col>
+        <Col md={6}>
         <div className="row-one-two">
           <p>Manage Memberships</p>
           <button
@@ -42,6 +50,7 @@ const Index = () => {
           >
             Create New Membership
           </button>
+          <br></br>
           <button
             style={{ cursor: "pointer" }}
             onClick={() => handleEdit(item.id)}
@@ -49,19 +58,32 @@ const Index = () => {
             Edit Membership
           </button>
         </div>
-      </div>
-      <div className="membership-row-two">
+        </Col>
+        </Row>
+        </Card.Body>
+        </Card>
+      {/* </div> */}
+      <Row  >
         {membership &&
           membership.map((item) => (
-            <div className="row-two" key={item.id}>
-              <div className="row-two-para">
+
+          
+             
+          
+              <Col lg={2} sm={4} xs={6}>
+               <div className="row-two-para">
                 <Button onClick={() => handleEdit(item.id)}>{item.name}</Button>
-              </div>
-              <div className="row-two-block">
+              </div> 
+              {/* <div className="row-two-block"> */}
+              
                 <MembershipCard />
-              </div>
-            </div>
+            
+              {/* </div> */}
+              </Col>
+             
+            
           ))}
+           </Row>
         {/* <div className="row-two">
           <div className="row-two-para">
             <p>Free membership subscribers</p>
@@ -101,7 +123,8 @@ const Index = () => {
             <MembershipCard></MembershipCard>
           </div>
         </div> */}
-      </div>
+      
+      </Container>
     </div>
   );
 };

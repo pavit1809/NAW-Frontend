@@ -26,15 +26,16 @@ const UserList = ({ userData, deleteClick }) => {
         </div>
       </div>
       <div className="user-info-div">{email}</div>
+      <div className="ms-auto">
       <div className="user-action-div">
         <img
           src={viewIcon}
           alt="viewicon"
-          style={{ marginRight: 22 }}
           className="action-icon"
         />
         <span
           style={{ cursor: "pointer" }}
+          className="mx-3"
           onClick={() =>
             navigate("/admin/users/details", { state: { userId: id } })
           }
@@ -43,20 +44,21 @@ const UserList = ({ userData, deleteClick }) => {
         </span>
         <img
           src={editIcon}
-          style={{ marginRight: 22 }}
+          
           alt="editicon"
           className="action-icon"
         />
-        <span style={{ cursor: "pointer" }}>Edit</span>
+        <span style={{ cursor: "pointer" }} className="mx-3">Edit</span>
         <img
           src={deleteIcon}
-          style={{ marginRight: 22 }}
+          
           alt="deleteicon"
           className="action-icon"
         />
-        <span style={{ cursor: "pointer" }} onClick={() => deleteClick(id)}>
+        <span style={{ cursor: "pointer" }} onClick={() => deleteClick(id)} className="mx-3">
           Delete
         </span>
+      </div>
       </div>
     </div>
   );

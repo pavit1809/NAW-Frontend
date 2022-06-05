@@ -24,7 +24,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import "../../assets/styles/common.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 // ----------------------------------------------------------------------
 const feedPostData = {
@@ -53,8 +52,9 @@ const style = {
 const Dashboard = () => {
   const auth = JSON.parse(localStorage.getItem("auth"));
   const [open, setOpen] = useState(false);
-
   const navigate = useNavigate();
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -92,20 +92,6 @@ const Dashboard = () => {
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <Button
-              variant="contained"
-              sx={{
-                margin: "auto",
-                marginBottom: "10%",
-                display: "flex",
-                justifyContent: "center",
-              }}
-              onClick={() => {
-                navigate(`/d/feedback`);
-              }}
-            >
-              Feedback
-            </Button>
             <img
               src={DashboardRightJoinNow}
               alt="right join now"

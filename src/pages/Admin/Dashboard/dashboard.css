@@ -1,3 +1,7 @@
+.admin-dashboard {
+  margin-top: 7rem;
+}
+
 .admin-dashboard .header-title {
   font-size: 42px;
   font-weight: 700;
@@ -10,16 +14,19 @@
 }
 
 .admin-dashboard .events-section .left-section {
-  width: 57%;
+  /* width: 57%; */
 }
 
 .admin-dashboard .events-section .right-section {
-  width: 40%;
+  /* width: 40%; */
 }
 
-.admin-dashboard .events-section .left-section .section-title {
+/* .admin-dashboard .events-section .left-section */ .section-title {
   font-size: 26px;
   font-weight: 700;
+ 
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .admin-dashboard .events-section .left-section .section-body {

@@ -62,6 +62,7 @@ const Index = (props) => {
           });
       })
       .catch((error) => console.log(error));
+  
   };
 
   return (

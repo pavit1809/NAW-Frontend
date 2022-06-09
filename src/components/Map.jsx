@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
+// import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import Profile from "../assets/images/author.png";
 import MapUserCard from "./MapUserCard";
 

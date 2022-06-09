@@ -79,10 +79,19 @@
 }
 
 .firstrow{
-  height: 50%;
-  border: 2px solid red;
+  height: 50% !important;
 }
 
 .header-title{
   font-family: "Playfair Display";
+  padding: "4%";
+}
+
+.section-title{
+  font-family: Inter;
+  font-weight: 800;
+}
+
+.graph{
+  border-radius: 10px !important;
 }

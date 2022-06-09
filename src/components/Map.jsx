@@ -5,7 +5,7 @@ import MapUserCard from "./MapUserCard";
 
 // useLayoutEffect = useEffect;
 
-export const DisplayMap = ({ google }) => {
+const DisplayMap = ({ google }) => {
   const [showUserData, setShowuserData] = useState(false);
   const [activemarker, setActiveMarker] = useState();
 
@@ -52,8 +52,11 @@ export const DisplayMap = ({ google }) => {
       </InfoWindow> */}
     </Map>
   );
+  return <h2>Map</h2>;
 };
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyBG0NPYP8_BJ_IkyIEwcDcvGQ4C65X-So8",
 })(DisplayMap);
+
+// export default DisplayMap;

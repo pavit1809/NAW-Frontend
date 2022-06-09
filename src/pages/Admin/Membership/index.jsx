@@ -31,59 +31,57 @@ const Index = () => {
   return (
     <div className="admin-users">
       <Container fluid>
-      <div className="header-title">Membership</div>
-      {/* <div className="membership-row-one"> */}
-      <Card>
-        <Card.Body>
-          <Row>
-            <Col md={6}>
-        <div className="d-flex justify-content-center">
-          <img src={imageOne} alt="/membership-row-one" />
-        </div>
-        </Col>
-        <Col md={6}>
-        <div className="row-one-two">
-          <p>Manage Memberships</p>
-          <button
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/admin/membership/create-membership")}
-          >
-            Create New Membership
-          </button>
-          <br></br>
-          <button
-            style={{ cursor: "pointer" }}
-            onClick={() => handleEdit(membership.id)}
-          >
-            Edit Membership
-          </button>
-        </div>
-        </Col>
-        </Row>
-        </Card.Body>
-        </Card>
-      {/* </div> */}
-      <Row  >
-        {membership &&
-          membership.map((item) => (
-
-          
-             
-          
-              <Col lg={2} sm={4} xs={6}>
-               <div className="row-two-para">
-                <Button onClick={() => handleEdit(item.id)}>{item.name}</Button>
-              </div> 
-              {/* <div className="row-two-block"> */}
-              
-                <MembershipCard />
-            
-              {/* </div> */}
+        <div className="header-title">Membership</div>
+        {/* <div className="membership-row-one"> */}
+        <Card class="shadow-3">
+          <Card.Body>
+            <Row>
+              <Col md={6}>
+                <div className="d-flex justify-content-center">
+                  <img src={imageOne} alt="/membership-row-one" />
+                </div>
               </Col>
-             
-            
-          ))}
-           </Row>
+              <Col md={6}>
+                <div className="row-one-two">
+                  <p>Manage Memberships</p>
+                  <button
+                    style={{ cursor: "pointer", width: "40%" }}
+                    onClick={() =>
+                      navigate("/admin/membership/create-membership")
+                    }
+                  >
+                    Create New Membership
+                  </button>
+                  <br></br>
+                  <button
+                    style={{ cursor: "pointer", width: "40%" }}
+                    onClick={() => handleEdit(membership.id)}
+                  >
+                    Edit Membership
+                  </button>
+                </div>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+        {/* </div> */}
+        <Row>
+          {membership &&
+            membership.map((item) => (
+              <Col lg={2} sm={4} xs={6}>
+                <div className="row-two-para">
+                  <Button onClick={() => handleEdit(item.id)}>
+                    {item.name}
+                  </Button>
+                </div>
+                {/* <div className="row-two-block"> */}
+
+                <MembershipCard />
+
+                {/* </div> */}
+              </Col>
+            ))}
+        </Row>
         {/* <div className="row-two">
           <div className="row-two-para">
             <p>Free membership subscribers</p>
@@ -123,7 +121,6 @@ const Index = () => {
             <MembershipCard></MembershipCard>
           </div>
         </div> */}
-      
       </Container>
     </div>
   );

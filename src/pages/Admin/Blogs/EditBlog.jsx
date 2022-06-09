@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import imageAd from "../../../assets/admin-images/ad-image.png";
-import imageOne from "../../../assets/admin-images/membership-row-one.png";
+// import imageOne from "../../../assets/admin-images/membership-row-one.png";
+import imageOne from "../../../assets/admin-images/edit-blog-img.png";
 import axios from "axios";
 import "../Ads/Ads.css";
 import moment from "moment";
@@ -62,7 +63,9 @@ const Index = () => {
 
   return (
     <div className="admin-users">
-      <div className="header-title">Blogs</div>
+      <div className="header-title" style={{ margin: "1.5%" }}>
+        Blogs
+      </div>
       <div className="ad-rows">
         <div className="ad-row-one">
           <p>Edit Blogs</p>
@@ -118,7 +121,11 @@ const Index = () => {
           </div>
         </div>
         <div className="ad-row-two">
-          <img src={imageOne} alt="" />
+          <img
+            src={imageOne}
+            alt=""
+            style={{ margin: "10%", marginTop: "25%" }}
+          />
         </div>
       </div>
     </div>

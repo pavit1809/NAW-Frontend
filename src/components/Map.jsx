@@ -55,8 +55,8 @@ const DisplayMap = ({ google }) => {
   return <h2>Map</h2>;
 };
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyBG0NPYP8_BJ_IkyIEwcDcvGQ4C65X-So8",
-})(DisplayMap);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyBG0NPYP8_BJ_IkyIEwcDcvGQ4C65X-So8",
+// })(DisplayMap);
 
-// export default DisplayMap;
+export default DisplayMap;

@@ -43,6 +43,7 @@
   font-weight: 700;
 }
 
+
 .admin-dashboard .events-section .right-section .section-body {
   box-shadow: 0px 20px 45px #f0edf6;
   background-color: white;
@@ -75,4 +76,13 @@
   width: 30%;
   margin-top: 24px;
   margin-right: 15px;
+}
+
+.firstrow{
+  height: 50%;
+  border: 2px solid red;
+}
+
+.header-title{
+  font-family: "Playfair Display";
 }

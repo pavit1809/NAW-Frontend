@@ -46,7 +46,7 @@ function Header() {
               </div>
             )}
           </div>
-          <div className="button">
+          <div className="button searchButton">
             {path === "/admin/users" && (
               <div className="btn">
                 <Button variant="contained">Search</Button>

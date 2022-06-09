@@ -11,12 +11,16 @@ import { Button } from "@mui/material";
 function Index() {
   const navigate = useNavigate();
 
+  const EventContainerStyle = {
+
+  };
+
   return (
     <div className="admin-users">
       <Container>
         <div className="header-title">Events</div>
         {/* <div className="events-row-one"> */}
-        <Card class="card-top">
+        <Card className="card-top event-create-container">
           <Card.Body>
             <Row>
               <Col md={6}>
@@ -37,11 +41,12 @@ function Index() {
               </Col>
             </Row>
           </Card.Body>
-        </Card>
+        </Card> 
+
         <Container className="mt-5 event-card">
           <Row>
             <Col md={4}>
-              <Card>
+              <Card className="event-type-common">
                 <Card.Body>
                   {/* </div> */}
                   {/* <div className="events-row-two"> */}
@@ -60,7 +65,7 @@ function Index() {
               </Card>
             </Col>
             <Col md={4}>
-              <Card>
+              <Card className="event-type-common">
                 <Card.Body>
                   {/* </div> */}
                   {/* <div className="row-two"> */}
@@ -80,7 +85,7 @@ function Index() {
               </Card>
             </Col>
             <Col md={4}>
-              <Card>
+              <Card className="event-type-common">
                 <Card.Body>
                   {/* </div> */}
                   {/* <div className="row-two">

@@ -43,12 +43,20 @@ const Users = () => {
       .catch((error) => console.log(error));
   };
 
+  const uploadModalStyle = {
+    "border-radius": "8px",
+  }
+
+  const tableStyle = {
+    "margin-left": "-5px"
+  }
+
   return (
     <div className="admin-users">
       <Container>
         <div className="header-title">Users</div>
         {/* <div className="add-user-banner"> */}
-        <Card>
+        <Card style={uploadModalStyle}>
           <Card.Body>
             <Row>
               <Col lg={6}>
@@ -111,8 +119,8 @@ const Users = () => {
             />
           </span>
         </div> */}
-          <Container style={{ overflowX: "scroll" }} className="bg-light">
-            <Table responsive>
+          {/* <Container style={{ overflowX: "scroll" }} className="bg-light"> */}
+            <Table responsive style={tableStyle}>
               <tbody>
                 {usersList && usersList.length
                   ? usersList.map((item) => (
@@ -139,7 +147,7 @@ const Users = () => {
                 />
               </span>
             </div>
-          </Container>
+          {/* </Container> */}
         </div>
       </Container>
     </div>

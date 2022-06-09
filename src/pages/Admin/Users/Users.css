@@ -95,9 +95,6 @@
 
 }
 
-.admin-users .manage-users-section .user-list-container {
-}
-
 .admin-users .manage-users-section .user-list-card {
   width: 100%;
   height: 80px;
@@ -106,7 +103,7 @@
   padding-top: 22px;
   padding-bottom: 22px;
   background-color: #fff;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
   display: flex;
   align-items: center;
 }
@@ -172,9 +169,6 @@
   background-color: #fff;
   color: #3670f8;
   cursor: pointer;
-}
-
-.user-details {
 }
 
 .user-details .header-title {
@@ -262,4 +256,9 @@
 }
 .text-center{
   font-family: "Inter";
+}
+
+.main-user-info-body{
+  margin-right: 100px;
+  margin-top: 300px;
 }

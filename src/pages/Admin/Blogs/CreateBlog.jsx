@@ -48,8 +48,12 @@ const CreateBlog = () => {
       .catch((error) => console.log(error));
   };
 
+  const formStyle = {
+    "margin-left": "20rem"
+  }
+
   return (
-    <div className="admin-users">
+    <div className="admin-users" style={formStyle}>
       <div className="header-title">Blogs</div>
       <div className="ad-rows">
         <div className="ad-row-one">

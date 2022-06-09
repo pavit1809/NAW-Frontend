@@ -1,7 +1,7 @@
 .admin-header {
   position: fixed;
-  width: calc(100vw - 295px);
-  left: 295px;
+  width: 90%;
+  left: 100px;
   top: 0;
   height: 120px;
   display: flex;
@@ -10,7 +10,6 @@
   z-index: 99;
   padding-left: 64px;
   padding-right: 59px;
- 
 }
 
 .admin-header .left-side {
@@ -61,4 +60,8 @@
     width: 300px;
     margin-top: 0.4rem;
   }
+}
+
+.search{
+  display: flex;
 }

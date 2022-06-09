@@ -6,6 +6,7 @@
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 40px;
+  font-family: "Playfair Display";
 }
 
 .admin-users .add-user-banner {
@@ -23,6 +24,11 @@
 
 .admin-users .add-user-banner .add-user-banner-img {
   height: 213px;
+}
+
+.add-user-banner-img {
+  height: 100%;
+  padding: 12.5%;
 }
 
 .admin-users .add-user-banner .add-user-banner-content {
@@ -46,9 +52,10 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
-  padding-right: 10px;
-  margin-top: 34px;
-  margin-left: 2rem;
+  padding-right: 20px;
+  margin-top: 20%;
+  margin-left: 20%;
+  margin: "auto";
 }
 
 /* .admin-users .add-user-banner*/ .file-upload .file-upload-btn { 
@@ -77,12 +84,15 @@
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 46px;
+  font-family: "Inter";
 }
 
 .admin-users .manage-users-section .list-users-title {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 46px;
+  font-family: "Inter";
+
 }
 
 .admin-users .manage-users-section .user-list-container {
@@ -186,6 +196,11 @@
   margin-bottom: 54px;
 }
 
+.user-image-name{
+  width: 40%;
+  display: flex;
+}
+
 .user-details .user-image-section img {
   margin-right: 43px;
 }
@@ -244,4 +259,7 @@
     margin-left: 0;
     width: 100%;
   }
+}
+.text-center{
+  font-family: "Inter";
 }

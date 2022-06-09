@@ -1,11 +1,11 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
+// import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import Profile from "../assets/images/author.png";
 import MapUserCard from "./MapUserCard";
 
 // useLayoutEffect = useEffect;
 
-export const DisplayMap = ({ google }) => {
+const DisplayMap = ({ google }) => {
   const [showUserData, setShowuserData] = useState(false);
   const [activemarker, setActiveMarker] = useState();
 
@@ -28,32 +28,35 @@ export const DisplayMap = ({ google }) => {
     setActiveMarker(marker);
   };
 
-  return (
-    <Map
-      google={google}
-      zoom={8}
-      initialCenter={{ lat: 47.444, lng: -122.176 }}
-    >
-      {users.map((item, index) => (
-        <Marker
-          position={item.position}
-          key={index}
-          icon={{
-            url: item.ProfileImage,
-            anchor: new google.maps.Point(32, 32),
-            scaledSize: new google.maps.Size(53, 53),
-          }}
-          onMouseover={() => setShowuserData(true)}
-          onClick={handleMarkerClick}
-        />
-      ))}
-      {/* <InfoWindow marker={activemarker} visible={showUserData}>
-        <MapUserCard />
-      </InfoWindow> */}
-    </Map>
-  );
+  // return (
+  //   <Map
+  //     google={google}
+  //     zoom={8}
+  //     initialCenter={{ lat: 47.444, lng: -122.176 }}
+  //   >
+  //     {users.map((item, index) => (
+  //       <Marker
+  //         position={item.position}
+  //         key={index}
+  //         icon={{
+  //           url: item.ProfileImage,
+  //           anchor: new google.maps.Point(32, 32),
+  //           scaledSize: new google.maps.Size(53, 53),
+  //         }}
+  //         onMouseover={() => setShowuserData(true)}
+  //         onClick={handleMarkerClick}
+  //       />
+  //     ))}
+  //     {/* <InfoWindow marker={activemarker} visible={showUserData}>
+  //       <MapUserCard />
+  //     </InfoWindow> */}
+  //   </Map>
+  // );
+  return <h2>Map</h2>;
 };
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyBG0NPYP8_BJ_IkyIEwcDcvGQ4C65X-So8",
-})(DisplayMap);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyBG0NPYP8_BJ_IkyIEwcDcvGQ4C65X-So8",
+// })(DisplayMap);
+
+export default DisplayMap;

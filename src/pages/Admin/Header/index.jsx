@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import avatarIcon from "../../../assets/admin-images/avatar.png";
 import arrowDown from "../../../assets/admin-images/arrow-down.png";
 import notificationIcon from "../../../assets/admin-images/notification-icon.png";
+import { Button } from "@mui/material";
 
 function Header() {
   const location = useLocation();
@@ -22,16 +23,37 @@ function Header() {
               <input type="text" className="" placeholder="Search" />
             </div>
           ))}
-
-        {path === "/admin/users" && (
-          <div className="admin-dash-header-searchbar">
-            <input
-              type="text"
-              className=""
-              placeholder="Search by City and State"
-            />
+        <div className="search">
+          <div className="firstSearch">
+            {path === "/admin/users" && (
+              <div className="admin-dash-header-searchbar">
+                <input
+                  type="text"
+                  className=""
+                  placeholder="Search by City and State"
+                />
+              </div>
+            )}
           </div>
-        )}
+          <div className="secondSearch">
+            {path === "/admin/users" && (
+              <div className="admin-dash-header-searchbar">
+                <input
+                  type="text"
+                  className=""
+                  placeholder="Search by Event Type"
+                />
+              </div>
+            )}
+          </div>
+          <div className="button">
+            {path === "/admin/users" && (
+              <div className="btn">
+                <Button variant="contained">Search</Button>
+              </div>
+            )}
+          </div>
+        </div>
 
         {path === "/admin/events" && (
           <div className="admin-dash-header-searchbar">

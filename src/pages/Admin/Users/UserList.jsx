@@ -13,11 +13,14 @@ const UserList = ({ userData, deleteClick }) => {
   return (
     <div className="user-list-card">
       <div className="user-image-name">
-        <img
-          src={profile_pic || userIcon}
-          className="user-icon"
-          alt="usericon"
-        />
+        <div className="img-div">
+          <img
+            src={profile_pic || userIcon}
+            className="user-icon"
+            alt="usericon"
+          />
+        </div>
+
         <div className="user-name-div">
           <span className="user-name">
             {last_name} {first_name}
@@ -27,38 +30,30 @@ const UserList = ({ userData, deleteClick }) => {
       </div>
       <div className="user-info-div">{email}</div>
       <div className="ms-auto">
-      <div className="user-action-div">
-        <img
-          src={viewIcon}
-          alt="viewicon"
-          className="action-icon"
-        />
-        <span
-          style={{ cursor: "pointer" }}
-          className="mx-3"
-          onClick={() =>
-            navigate("/admin/users/details", { state: { userId: id } })
-          }
-        >
-          View
-        </span>
-        <img
-          src={editIcon}
-          
-          alt="editicon"
-          className="action-icon"
-        />
-        <span style={{ cursor: "pointer" }} className="mx-3">Edit</span>
-        <img
-          src={deleteIcon}
-          
-          alt="deleteicon"
-          className="action-icon"
-        />
-        <span style={{ cursor: "pointer" }} onClick={() => deleteClick(id)} className="mx-3">
-          Delete
-        </span>
-      </div>
+        <div className="user-action-div">
+          <img src={viewIcon} alt="viewicon" className="action-icon" />
+          <span
+            style={{ cursor: "pointer" }}
+            className="mx-3"
+            onClick={() =>
+              navigate("/admin/users/details", { state: { userId: id } })
+            }
+          >
+            View
+          </span>
+          <img src={editIcon} alt="editicon" className="action-icon" />
+          <span style={{ cursor: "pointer" }} className="mx-3">
+            Edit
+          </span>
+          <img src={deleteIcon} alt="deleteicon" className="action-icon" />
+          <span
+            style={{ cursor: "pointer" }}
+            onClick={() => deleteClick(id)}
+            className="mx-3"
+          >
+            Delete
+          </span>
+        </div>
       </div>
     </div>
   );

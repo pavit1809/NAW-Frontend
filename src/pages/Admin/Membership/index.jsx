@@ -45,7 +45,7 @@ const Index = () => {
                 <div className="row-one-two">
                   <p>Manage Memberships</p>
                   <button
-                    style={{ cursor: "pointer", width: "40%" }}
+                    style={{ cursor: "pointer", width: "45%" }}
                     onClick={() =>
                       navigate("/admin/membership/create-membership")
                     }
@@ -54,7 +54,7 @@ const Index = () => {
                   </button>
                   <br></br>
                   <button
-                    style={{ cursor: "pointer", width: "40%" }}
+                    style={{ cursor: "pointer", width: "45%" }}
                     onClick={() => handleEdit(membership.id)}
                   >
                     Edit Membership
@@ -66,7 +66,76 @@ const Index = () => {
         </Card>
         {/* </div> */}
         <Row>
-          {membership &&
+          <Col>
+            <div
+              className="sub-heading"
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: "600",
+                fontSize: "26px",
+                lineHeight: "144%",
+                textAlign: "center",
+                width: "80%",
+                margin: "5%",
+                marginTop: "10%",
+              }}
+            >
+              Free Membership subscribers
+            </div>
+            {membership &&
+              membership.map((item) => (
+                <div className="con">
+                  <MembershipCard />
+                </div>
+              ))}
+          </Col>
+          <Col>
+            <div
+              className="sub-heading"
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: "600",
+                fontSize: "26px",
+                lineHeight: "144%",
+                textAlign: "center",
+                width: "65%",
+                margin: "5%",
+                marginTop: "10%",
+              }}
+            >
+              $39 per year subscribers
+            </div>
+            {membership &&
+              membership.map((item) => (
+                <div className="con">
+                  <MembershipCard />
+                </div>
+              ))}
+          </Col>
+          <Col>
+            <div
+              className="sub-heading"
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: "600",
+                fontSize: "26px",
+                lineHeight: "144%",
+                textAlign: "center",
+                width: "65%",
+                margin: "5%",
+                marginTop: "10%",
+              }}
+            >
+              $199 per year subscribers
+            </div>
+            {membership &&
+              membership.map((item) => (
+                <div className="con">
+                  <MembershipCard />
+                </div>
+              ))}
+          </Col>
+          {/* {membership &&
             membership.map((item) => (
               <Col lg={2} sm={4} xs={6}>
                 <div className="row-two-para">
@@ -74,13 +143,9 @@ const Index = () => {
                     {item.name}
                   </Button>
                 </div>
-                {/* <div className="row-two-block"> */}
-
                 <MembershipCard />
-
-                {/* </div> */}
               </Col>
-            ))}
+            ))} */}
         </Row>
         {/* <div className="row-two">
           <div className="row-two-para">

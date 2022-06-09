@@ -8,14 +8,27 @@ function MembershipCard() {
     // <div className="membership-card">
     //   <div className="card-image">
     <Card>
-      <Card.Img src={cardImage} alt="membership card" />
-      <Card.Body>
-        {/* // </div> */}
-        {/* // <div className="card-details"> */}
-        <Card.Text>Eleanor Pena</Card.Text>
-        <Card.Text>Dog Trainer</Card.Text>
-        <Card.Text>Lorem Ipsum</Card.Text>
-      </Card.Body>
+      <div className="card-main" style={{ display: "flex" }}>
+        <Card.Img
+          src={cardImage}
+          alt="membership card"
+          style={{
+            margin: "5%",
+            width: "20%",
+            height: "50%",
+          }}
+        />
+        {/* <div className="card-img"></div> */}
+        <div className="card-body">
+          <Card.Body>
+            <Card.Text>
+              Eleanor Pena <br />
+              Dog Trainer <br />
+              Lorem Ipsum
+            </Card.Text>
+          </Card.Body>
+        </div>
+      </div>
     </Card>
     // </div>
     // </div>

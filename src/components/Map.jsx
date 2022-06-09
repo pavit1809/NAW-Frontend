@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
+// import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import Profile from "../assets/images/author.png";
 import MapUserCard from "./MapUserCard";
 
@@ -28,30 +28,30 @@ const DisplayMap = ({ google }) => {
     setActiveMarker(marker);
   };
 
-  return (
-    <Map
-      google={google}
-      zoom={8}
-      initialCenter={{ lat: 47.444, lng: -122.176 }}
-    >
-      {users.map((item, index) => (
-        <Marker
-          position={item.position}
-          key={index}
-          icon={{
-            url: item.ProfileImage,
-            anchor: new google.maps.Point(32, 32),
-            scaledSize: new google.maps.Size(53, 53),
-          }}
-          onMouseover={() => setShowuserData(true)}
-          onClick={handleMarkerClick}
-        />
-      ))}
-      {/* <InfoWindow marker={activemarker} visible={showUserData}>
-        <MapUserCard />
-      </InfoWindow> */}
-    </Map>
-  );
+  // return (
+  //   <Map
+  //     google={google}
+  //     zoom={8}
+  //     initialCenter={{ lat: 47.444, lng: -122.176 }}
+  //   >
+  //     {users.map((item, index) => (
+  //       <Marker
+  //         position={item.position}
+  //         key={index}
+  //         icon={{
+  //           url: item.ProfileImage,
+  //           anchor: new google.maps.Point(32, 32),
+  //           scaledSize: new google.maps.Size(53, 53),
+  //         }}
+  //         onMouseover={() => setShowuserData(true)}
+  //         onClick={handleMarkerClick}
+  //       />
+  //     ))}
+  //     {/* <InfoWindow marker={activemarker} visible={showUserData}>
+  //       <MapUserCard />
+  //     </InfoWindow> */}
+  //   </Map>
+  // );
   return <h2>Map</h2>;
 };
 

@@ -7,6 +7,7 @@ import "./events.css";
 import { useNavigate } from "react-router-dom";
 import { Container, Card, Row, Col, Image } from "react-bootstrap";
 import { Button } from "@mui/material";
+import "@fontsource/inter";
 
 function Index() {
   const navigate = useNavigate();

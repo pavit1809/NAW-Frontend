@@ -19,6 +19,7 @@ import FreeImg from "../../../assets/admin-images/Free.png";
 import Img_$39 from "../../../assets/admin-images/39$.png";
 import Img_$199 from "../../../assets/admin-images/199$.png";
 import "@fontsource/playfair-display";
+import "@fontsource/inter";
 
 function Dashboard() {
   const [events, setEvents] = useState([]);
@@ -55,24 +56,32 @@ function Dashboard() {
       .get("event/")
       .then((response) => {
         // console.log(response, "response");
-        setEvents(response.data.data);
+        let arr = response.data.data;
+        let arr_sliced = arr.slice(0, 5);
+        console.log(arr_sliced);
+        setEvents(arr_sliced);
       })
       .catch((error) => console.log(error));
   }, []);
   return (
     <div className="admin-dashboard">
-      <Container>
-        <div className="header-title">Dashboard</div>
+      <Container className="">
+        <div className="header-title" style={{ padding: "1%" }}>
+          Dashboard
+        </div>
 
-        {/* <div className="events-section"> */}
-
-        {/* <div className="left-section"> */}
-
-        <span className="section-title">Events</span>
-        {/* <div className="section-body"> */}
         <Row class="firstrow">
-          <Col lg={7} sm={6}>
-            <Card>
+          <Col lg={7} sm={6} className="">
+            <span className="section-title" style={{ padding: "2%" }}>
+              Events
+            </span>
+            <br />
+            <Card
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0px 20px 45px #F0EDF6",
+              }}
+            >
               <Card.Body>
                 {events.map((item, index) => (
                   <EventsLists key={index} data={item} />
@@ -81,22 +90,18 @@ function Dashboard() {
             </Card>
           </Col>
 
-          {/* <EventsLists />
-            <EventsLists />
-            <EventsLists />
-            <EventsLists /> */}
-          {/* </div> */}
-
-          {/* </div> */}
           <Col lg={5} sm={6}>
-            {/* <div className="right-section"> */}
-            <span className="section-title ">Membership</span>
-            {/* <div className="section-body"> */}
+            <span className="section-title">Membership</span>
+            <br />
             <ResponsiveContainer
               width="100%"
-              height="50%"
-              className=" bg-white"
+              height="92%"
+              className=" bg-white graph"
               strokeDasharray
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0px 20px 45px #F0EDF6",
+              }}
             >
               <LineChart width={530} height={100} data={data}>
                 <XAxis dataKey="name" />
@@ -105,9 +110,6 @@ function Dashboard() {
                 <Line type="monotone" dataKey="Decrease" stroke="#A93BFF" />
               </LineChart>
             </ResponsiveContainer>
-            {/* </div>
-         
-        </div> */}
           </Col>
         </Row>
 

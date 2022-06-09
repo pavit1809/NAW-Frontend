@@ -52,7 +52,7 @@ const DisplayMap = ({ google }) => {
       </InfoWindow> */}
     </Map>
   );
-  return <h2>Map</h2>;
+  // return <h2>Map</h2>;
 };
 
 export default GoogleApiWrapper({

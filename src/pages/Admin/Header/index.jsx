@@ -55,6 +55,12 @@ function Header() {
           </div>
         </div>
 
+        {path === "/admin/dashboard" && (
+          <div className="admin-dash-header-searchbar">
+            <input type="text" className="" placeholder="Search" />
+          </div>
+        )}
+
         {path === "/admin/events" && (
           <div className="admin-dash-header-searchbar">
             <input type="text" className="" placeholder="Search" />

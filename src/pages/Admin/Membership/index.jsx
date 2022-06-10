@@ -11,14 +11,21 @@ import { Card, Container, Row, Col } from "react-bootstrap";
 const Index = () => {
   const navigate = useNavigate();
   const [membership, setMemberShip] = useState([]);
+  const [membershipCategory2, setMembershipCategory2] = useState([]);
+  const [membershipCategory3, setMembershipCategory3] = useState([]);
 
   useEffect(() => {
     axios
       .get("membership-plan/")
       .then((response) => {
         if (response.status >= 200 && response.status < 210) {
-          console.log("Data: ", response.data.data);
-          setMemberShip(response.data.data);
+          const allEvents = response.data.data;
+          const events1 = allEvents.filter((event) => (parseInt(event.price) < 39));
+          const events2 = allEvents.filter((event) => (parseInt(event.price) >= 39 && parseInt(event.price) <= 199));
+          const events3 = allEvents.filter((event) => (parseInt(event.price) >199));
+          setMemberShip(events1);
+          setMembershipCategory2(events2);
+          setMembershipCategory3(events3);
         }
       })
       .catch((error) => console.log(error));
@@ -85,7 +92,7 @@ const Index = () => {
             {membership &&
               membership.map((item) => (
                 <div className="con">
-                  <MembershipCard />
+                  <MembershipCard user={item}/>
                 </div>
               ))}
           </Col>
@@ -105,10 +112,10 @@ const Index = () => {
             >
               $39 per year subscribers
             </div>
-            {membership &&
-              membership.map((item) => (
+            {membershipCategory2 &&
+              membershipCategory2.map((item) => (
                 <div className="con">
-                  <MembershipCard />
+                  <MembershipCard user={item}/>
                 </div>
               ))}
           </Col>
@@ -128,64 +135,14 @@ const Index = () => {
             >
               $199 per year subscribers
             </div>
-            {membership &&
-              membership.map((item) => (
+            {membershipCategory3 &&
+              membershipCategory3.map((item) => (
                 <div className="con">
-                  <MembershipCard />
+                  <MembershipCard user={item}/>
                 </div>
               ))}
           </Col>
-          {/* {membership &&
-            membership.map((item) => (
-              <Col lg={2} sm={4} xs={6}>
-                <div className="row-two-para">
-                  <Button onClick={() => handleEdit(item.id)}>
-                    {item.name}
-                  </Button>
-                </div>
-                <MembershipCard />
-              </Col>
-            ))} */}
         </Row>
-        {/* <div className="row-two">
-          <div className="row-two-para">
-            <p>Free membership subscribers</p>
-          </div>
-          <div className="row-two-block">
-            <MembershipCard />
-            <MembershipCard />
-            <MembershipCard />
-            <MembershipCard />
-            <MembershipCard />
-            <MembershipCard />
-          </div>
-        </div>
-        <div className="row-two">
-          <div className="row-two-para">
-            <p>$39 per year subscribers</p>
-          </div>
-          <div className="row-two-block">
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-          </div>
-        </div>
-        <div className="row-two">
-          <div className="row-two-para">
-            <p>$199 per year subscribers</p>
-          </div>
-          <div className="row-two-block">
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-            <MembershipCard></MembershipCard>
-          </div>
-        </div> */}
       </Container>
     </div>
   );

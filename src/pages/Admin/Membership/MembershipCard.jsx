@@ -3,10 +3,8 @@ import cardImage from "../../../assets/admin-images/membership-card-image.png";
 // import CardImage from "../../../assets/admin-images/avatar-img.png";
 import "./membership.css";
 import { Card } from "react-bootstrap";
-function MembershipCard() {
+function MembershipCard({user}) {
   return (
-    // <div className="membership-card">
-    //   <div className="card-image">
     <Card>
       <div className="card-main" style={{ display: "flex" }}>
         <Card.Img
@@ -22,9 +20,8 @@ function MembershipCard() {
         <div className="card-body">
           <Card.Body>
             <Card.Text>
-              Eleanor Pena <br />
-              Dog Trainer <br />
-              Lorem Ipsum
+              Mark Ruffalo <br />
+              {`${user.price} ${user.name}`} <br />
             </Card.Text>
           </Card.Body>
         </div>

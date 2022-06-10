@@ -95,3 +95,8 @@
 .graph{
   border-radius: 10px !important;
 }
+
+.graph-image{
+  box-shadow: 0px 20px 45px #F0EDF7;
+  border-radius: 8px;
+}

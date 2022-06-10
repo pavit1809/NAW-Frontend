@@ -4,13 +4,9 @@ import "./dashboard.css";
 import EventsLists from "./EventsLists";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import {
-  Bar,
-  BarChart,
   CartesianGrid,
-  Legend,
   Line,
   LineChart,
-  Tooltip,
   XAxis,
   YAxis,
   ResponsiveContainer,
@@ -55,10 +51,8 @@ function Dashboard() {
     axios
       .get("event/")
       .then((response) => {
-        // console.log(response, "response");
         let arr = response.data.data;
         let arr_sliced = arr.slice(0, 5);
-        console.log(arr_sliced);
         setEvents(arr_sliced);
       })
       .catch((error) => console.log(error));
@@ -113,46 +107,6 @@ function Dashboard() {
           </Col>
         </Row>
 
-        {/* </div> */}
-        <div className="membership-section">
-          {/* <span className="section-title">Membership Categories</span> */}
-          {/* <div className="section-container"> */}
-          {/* <Row>
-          <div className="section-body">
-            <BarChart width={400} height={250} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="Increase" fill="#5ACFCF" />
-              <Bar dataKey="Decrease" fill="#E6E8EC" />
-            </BarChart>
-          </div>
-          <div className="section-body">
-            <BarChart width={400} height={250} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="Increase" fill="#5ACFCF" />
-              <Bar dataKey="Decrease" fill="#E6E8EC" />
-            </BarChart>
-          </div>
-          <div className="section-body">
-            <BarChart width={400} height={250} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="Increase" fill="#5ACFCF" />
-              <Bar dataKey="Decrease" fill="#E6E8EC" />
-            </BarChart>
-          </div>
-          </Row> */}
-        </div>
         <Row>
           <span className="section-title mt-3 mb-3">Membership Categories</span>
           <Col lg={4} sm={6}>
@@ -162,25 +116,7 @@ function Dashboard() {
               className="mt-4 bg-white"
               strokeDasharray
             >
-              <img src={FreeImg} alt="Free Image" />
-              {/* <BarChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="Increase" fill="#5ACFCF" />
-                <Bar dataKey="Decrease" fill="#E6E8EC" />
-              </BarChart> */}
+              <img src={FreeImg} alt="Free Image" className="graph-image"/>
             </ResponsiveContainer>
           </Col>
           <Col lg={4} sm={6}>
@@ -190,25 +126,7 @@ function Dashboard() {
               className="mt-4 bg-white"
               strokeDasharray
             >
-              <img src={Img_$39} alt="$39 Image" />
-              {/* <BarChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                  top: 10,
-                  right: 30,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="Increase" fill="#5ACFCF" />
-                <Bar dataKey="Decrease" fill="#E6E8EC" />
-              </BarChart> */}
+              <img src={Img_$39} alt="$39 Image" className="graph-image"/>
             </ResponsiveContainer>
           </Col>
           <Col lg={4} sm={6}>
@@ -218,29 +136,10 @@ function Dashboard() {
               className="mt-4 bg-white"
               strokeDasharray
             >
-              <img src={Img_$199} alt="$199 Image" />
-              {/* <BarChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="Increase" fill="#5ACFCF" />
-                <Bar dataKey="Decrease" fill="#E6E8EC" />
-              </BarChart> */}
+              <img src={Img_$199} alt="$199 Image" className="graph-image"/>
             </ResponsiveContainer>
           </Col>
         </Row>
-        {/* </div> */}
       </Container>
     </div>
   );

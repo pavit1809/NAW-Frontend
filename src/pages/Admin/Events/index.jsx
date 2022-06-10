@@ -20,7 +20,6 @@ function Index() {
     <div className="admin-users">
       <Container>
         <div className="header-title">Events</div>
-        {/* <div className="events-row-one"> */}
         <Card className="card-top event-create-container">
           <Card.Body>
             <Row>
@@ -49,12 +48,7 @@ function Index() {
             <Col md={4}>
               <Card className="event-type-common">
                 <Card.Body>
-                  {/* </div> */}
-                  {/* <div className="events-row-two"> */}
-                  {/* <div className="row-two"> */}
-                  {/* <div className="row-two-image"> */}
                   <Card.Img src={rowTwoOne} alt="row-two-one" />
-                  {/* </div> */}
                   <div className="row-two-para">
                     <Button
                       onClick={() => navigate("/admin/events/event-details")}
@@ -68,11 +62,7 @@ function Index() {
             <Col md={4}>
               <Card className="event-type-common">
                 <Card.Body>
-                  {/* </div> */}
-                  {/* <div className="row-two"> */}
-                  {/* <div className="row-two-image"> */}
                   <Card.Img src={rowTwoTwo} alt="row-two-two" />
-                  {/* </div> */}
                   <div className="row-two-para">
                     <Button
                       onClick={() =>
@@ -88,11 +78,7 @@ function Index() {
             <Col md={4}>
               <Card className="event-type-common">
                 <Card.Body>
-                  {/* </div> */}
-                  {/* <div className="row-two">
-          <div className="row-two-image"> */}
                   <Card.Img src={rowTwoThree} alt="row-two-three" />
-                  {/* </div> */}
                   <div className="row-two-para">
                     <Button
                       onClick={() =>
@@ -102,8 +88,6 @@ function Index() {
                       Paid Events of $199 Membership
                     </Button>
                   </div>
-                  {/* </div> */}
-                  {/* </div> */}
                 </Card.Body>
               </Card>
             </Col>

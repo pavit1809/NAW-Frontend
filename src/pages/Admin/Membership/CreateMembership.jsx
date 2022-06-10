@@ -15,7 +15,6 @@ const Index = () => {
 
   const [membName, setMembName] = useState("");
   const [membAmount, setMembAmount] = useState("");
-  const [membDescription, setMembDescription] = useState("");
 
   const [memberFeatureList, setMemberFeatureList] = useState([]);
   const [selectedFeature, setSelectedFeature] = useState([]);
@@ -61,7 +60,7 @@ const Index = () => {
     const {
       target: { value },
     } = event;
-    setSelectedFeature(value);
+    setSelectedFeature([value]);
   };
 
   return (
@@ -87,13 +86,12 @@ const Index = () => {
               onChange={(e) => setMembAmount(e.target.value)}
             />
           </div>
+          
           <div className="input-block">
-            <label htmlFor="">Membership Feature</label>
-
-            {/* <Select
+            <label htmlFor="">Membership Features</label>
+            <Select
               labelId="demo-multiple-name-label"
               id="demo-multiple-name"
-              multiple
               value={selectedFeature}
               onChange={handleMultipleSelect}
             >
@@ -106,17 +104,7 @@ const Index = () => {
               ) : (
                 <MenuItem disabled>No feature available</MenuItem>
               )}
-            </Select> */}
-
-            <textarea
-              name="feature"
-              id="feature"
-              cols="30"
-              rows="10"
-              placeholder="Enter Membership Description"
-              value={membDescription}
-              onChange={(e) => setMembDescription(e.target.value)}
-            />
+            </Select>
           </div>
           <div className="input-block">
             <button onClick={() => handleCreateMembClick()}>

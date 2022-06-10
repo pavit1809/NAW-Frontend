@@ -11,30 +11,29 @@ const Index = () => {
   const navigate = useNavigate();
 
   const [eventName, setEventName] = useState("");
-  const [eventType, setEventType] = useState("");
+  const [eventType, setEventType] = useState("Free");
   const [eventDate, setEventDate] = useState(new Date());
   const [eventLink, setEventLink] = useState("");
   const [eventTime, setEventTime] = useState("");
   const [eventDiscription, setEventDiscription] = useState("");
   const [eventBanner, setEventBanner] = useState(null);
-  // const [isActiveEvent, setisActiveEvent] = useState(false);
+  const [eventAddress, setEventAddress] = useState("");
 
-  // const [eventTypeList, setEventTypeList] = useState([]);
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
-  const getData = () => {
-    axios
-      .get("/event")
-      .then((response) => {
-        // console.log(JSON.stringify(response));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const getData = () => {
+  //   axios
+  //     .get("/event")
+  //     .then((response) => {
+  //       // console.log(JSON.stringify(response));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   const handleCreateEventClick = async () => {
     const auth = JSON.parse(localStorage.getItem("auth"));
@@ -48,20 +47,9 @@ const Index = () => {
     formData.append("event_time", eventTime);
     formData.append("description", eventDiscription);
     formData.append("is_active", true);
+    formData.append('address', eventAddress);
 
-    // const EventDetails = {
-    //   name: eventName,
-    //   type: eventType,
-    //   event_date: moment(eventDate).format("YYYY-MM-DD"),
-    //   event_link: eventLink,
-    //   event_time: eventTime,
-    //   description: eventDiscription,
-    //   banner: bannerImage,
-    //   is_active: true,
-    // };
-
-    await axios
-      .post("event/", formData, {
+    axios.post("event/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           // crossorigin: true,
@@ -69,8 +57,9 @@ const Index = () => {
         },
       })
       .then((response) => {
+        console.log(response);
         if (response.status >= 200 && response.status < 210)
-          navigate("/admin/events");
+          navigate("/admin/dashboard");
       })
       .catch((error) => console.error(error));
   };
@@ -129,20 +118,9 @@ const Index = () => {
         <div className="ad-row-two">
           <div className="input-block">
             <label htmlFor="">Event Type</label>
-            {/* <input
-              type="text"
-              placeholder="Enter Name of the event"
-              value={eventType}
-              onChange={(e) => setEventType(e.target.value)}
-            /> */}
-
             <select onChange={(e) => setEventType(e.target.value)}>
-              {/* {eventTypeList && eventTypeList.length ? (
-								eventTypeList.map((item, index) => <option key={index}>item</option>)
-							) : ( */}
               <option value="Free">Free</option>
               <option value="Paid">Paid</option>
-              {/* )} */}
             </select>
           </div>
           <div className="input-block">
@@ -156,21 +134,10 @@ const Index = () => {
           </div>
           <div className="input-block">
             <label htmlFor="">Enter Banner</label>
-            {/* <input
-              type="file"
-              accept="image/*"
-              placeholder="Upload the banner of the event"
-              // value={eventBanner ? eventBanner.name : ""}
-              onChange={(e) => setEventBanner(e.target.files[0])}
-            /> */}
-            <div className="file-upload">
+            <div className="file-upload" style={{"margin-left": "-4px"}}>
               <span className="file-upload-placeholder">
                 Upload the banner of the event
               </span>
-
-              {/* <label className="file-upload-btn" htmlFor="upload-photo">
-                <Button variant="contained">Upload</Button>
-              </label> */}
               <Button
                 variant="contained"
                 className="file-upload-btn"
@@ -186,6 +153,18 @@ const Index = () => {
                 />
               </Button>
             </div>
+          </div>
+          <div className="input-block">
+            <label htmlFor="">Event Address</label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Enter Address of the event"
+              value={eventAddress}
+              onChange={(e) => setEventAddress(e.target.value)}
+            />
           </div>
         </div>
       </div>

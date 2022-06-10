@@ -56,7 +56,6 @@ function AdminLayout() {
       {path === "/admin/blogs/view-blog" && <ViewBlog />}
       {path === "/admin/blogs/edit-blog" && <EditBlogs />}
       {path === "/admin/ads/edit-ads" && <EditAds />}
-      {path === "/admin/ads/create-ads" && <CreateAds />}
       {path === "/admin/ads/user-ads" && <UserAds />}
 
       {path === "/admin/membership/edit-membership" && <EditMembership />}

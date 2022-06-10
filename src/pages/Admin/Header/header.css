@@ -19,7 +19,7 @@
 .admin-header .left-side .admin-dash-header-searchbar {
   height: 53px;
   min-width: 353px;
-  margin-left: 100px;
+  margin-left: 118px;
 }
 
 .admin-header .left-side .admin-dash-header-searchbar input {
@@ -65,7 +65,6 @@
 
 .search{
   display: flex;
-  margin-left: 50px;
 }
 
 .secondSearch{

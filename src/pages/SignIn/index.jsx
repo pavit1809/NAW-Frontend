@@ -66,10 +66,12 @@ export default function SignIn() {
         <Box
           className="signin-auth"
           sx={{
-            my: 8,
-            mx: 15,
             display: "flex",
             flexDirection: "column",
+            width: "340px"
+          }}
+          style={{
+            margin: "30px 122px 20px 220px"
           }}
         >
           <Typography component="h1" variant="h4">

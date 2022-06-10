@@ -20,7 +20,7 @@ function Index() {
     <div className="admin-users">
       <Container>
         <div className="header-title">Events</div>
-        <Card className="card-top event-create-container">
+        <Card className="card-top event-create-container" style={{height: "300px"}}>
           <Card.Body>
             <Row>
               <Col md={6}>
@@ -46,7 +46,7 @@ function Index() {
         <Container className="mt-5 event-card">
           <Row>
             <Col md={4}>
-              <Card className="event-type-common">
+              <Card className="event-type-common" style={{width:"300px", height:"437px"}}>
                 <Card.Body>
                   <Card.Img src={rowTwoOne} alt="row-two-one" />
                   <div className="row-two-para">
@@ -60,7 +60,7 @@ function Index() {
               </Card>
             </Col>
             <Col md={4}>
-              <Card className="event-type-common">
+              <Card className="event-type-common" style={{width:"400px", height:"437px"}}>
                 <Card.Body>
                   <Card.Img src={rowTwoTwo} alt="row-two-two" />
                   <div className="row-two-para">
@@ -76,7 +76,7 @@ function Index() {
               </Card>
             </Col>
             <Col md={4}>
-              <Card className="event-type-common">
+              <Card className="event-type-common" style={{width:"400px", height:"437px"}}>
                 <Card.Body>
                   <Card.Img src={rowTwoThree} alt="row-two-three" />
                   <div className="row-two-para">

@@ -51,7 +51,7 @@ const ViewBlog = () => {
   };
 
   return (
-    <div className="blog-main-content">
+    <div className="blog-main-content" style={{marginLeft: "190px", marginRight: "150px", marginTop: "3%"}}>
       <h1>{blogdata.title}</h1>
       <div className="blog-main-img">
         {/* <img src={blogdata.banner} alt="" /> */}

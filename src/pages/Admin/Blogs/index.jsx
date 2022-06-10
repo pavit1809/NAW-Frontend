@@ -56,10 +56,10 @@ const Index = () => {
   };
 
   return (
-    <div className="admin-users">
+    <div className="admin-users" style={{marginLeft: "220px", marginRight: "200px"}}>
       <div className="header-div">
         <div className="header-title">
-          <h5 className="dispaly-4 fw-bold mx-5">All Blogs</h5>
+          <h5 className="dispaly-4 fw-bold mx-5" style={{fontWeight:"700", fontSize: "30px"}}>All Blogs</h5>
         </div>
         <div>
           <Button

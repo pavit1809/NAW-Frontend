@@ -62,15 +62,15 @@ const Index = () => {
   };
 
   return (
-    <div className="admin-users">
+    <div className="admin-users" style={{marginLeft: "190px", marginRight: "150px"}}>
       <div className="header-title" style={{ margin: "1.5%" }}>
         Blogs
       </div>
       <div className="ad-rows">
         <div className="ad-row-one">
-          <p>Edit Blogs</p>
+          <p>Edit Blog</p>
           <div className="input-block">
-            <label htmlFor="">Blog Title</label>
+            <label htmlFor="" style={{marginBottom: "4px"}}>Blog Title</label>
             <input
               type="text"
               placeholder="Enter Name of the Blog"
@@ -81,7 +81,7 @@ const Index = () => {
             />
           </div>
           <div className="input-block">
-            <label htmlFor="">Blog Date</label>
+            <label htmlFor="" style={{marginBottom: "4px"}}>Blog Date</label>
             <input
               type="date"
               placeholder="Enter Date of the Blog"
@@ -92,7 +92,7 @@ const Index = () => {
             />
           </div>
           <div className="input-block">
-            <label htmlFor="">Blog Description</label>
+            <label htmlFor="" style={{marginBottom: "4px"}}>Blog Description</label>
             <textarea
               name=""
               id=""
@@ -106,7 +106,7 @@ const Index = () => {
             />
           </div>
           <div className="input-block">
-            <label htmlFor="">Blog Banner</label>
+            <label htmlFor="" style={{marginBottom: "4px"}}>Blog Banner</label>
             <input
               type="file"
               accept="image/*"
@@ -124,7 +124,7 @@ const Index = () => {
           <img
             src={imageOne}
             alt=""
-            style={{ margin: "10%", marginTop: "25%" }}
+            style={{ margin: "10%", marginTop: "25%", width: "500px", height: "384px" }}
           />
         </div>
       </div>

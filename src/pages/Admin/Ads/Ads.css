@@ -79,6 +79,7 @@
   margin-top: 11px;
   background: #fff;
   padding: 7px 15px;
+  margin-left: 0 !important;
 }
 .file-upload .file-upload-placeholder {
   font-size: 14px;

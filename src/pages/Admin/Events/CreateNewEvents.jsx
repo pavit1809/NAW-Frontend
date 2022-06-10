@@ -65,7 +65,7 @@ const Index = () => {
   };
 
   return (
-    <div className="admin-users">
+    <div className="admin-users" style={{marginLeft:"270px", marginRight: "200px"}}>
       <div className="header-title">Create Events</div>
       <div className="ad-rows">
         <div className="ad-row-one">

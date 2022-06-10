@@ -45,16 +45,40 @@ const Users = () => {
 
   const uploadModalStyle = {
     "border-radius": "8px",
-  }
+  };
 
   const tableStyle = {
-    "margin-left": "-5rem"
-  }
+    "margin-left": "-5rem",
+  };
 
   return (
     <div className="admin-users">
       <Container>
-        <div className="header-title">Users</div>
+        <div className="header-title">
+          Users
+          <Button
+            variant="contained"
+            style={{
+              width: "113px",
+              height: "30px",
+              left: "817px",
+            }}
+            component="label"
+          >
+            Filter
+          </Button>
+          <Button
+            variant="contained"
+            style={{
+              width: "205px",
+              height: "14px",
+              left: "839px",
+            }}
+            component="label"
+          >
+            Download User CSV
+          </Button>
+        </div>
         {/* <div className="add-user-banner"> */}
         <Card style={uploadModalStyle}>
           <Card.Body>
@@ -98,33 +122,25 @@ const Users = () => {
         <div className="manage-users-section">
           <div className="manage-title">Manage All Users</div>
           <div className="list-users-title">List of csv Files of users</div>
-            <Table responsive style={tableStyle}>
-              <tbody>
-                {usersList && usersList.length
-                  ? usersList.map((item) => (
-                      <tr>
-                        <td>
-                          <UserList
-                            key={item.id}
-                            userData={item}
-                            deleteClick={handleDeleteClick}
-                          />
-                        </td>
-                      </tr>
-                    ))
-                  : null}
-              </tbody>
-            </Table>
-            <div className="view-more-btn-container">
-              <span className="view-more-btn">
-                View More{" "}
-                <img
-                  src={arrowDown}
-                  style={{ transform: "rotate(-90deg)", marginLeft: 5 }}
-                  alt="arrow down"
-                />
-              </span>
-            </div>
+              {usersList && usersList.length
+                ? usersList.map((item) => (
+                        <UserList
+                          key={item.id}
+                          userData={item}
+                          deleteClick={handleDeleteClick}
+                        />
+                  ))
+                : null}
+          <div className="view-more-btn-container">
+            <span className="view-more-btn">
+              View More{" "}
+              <img
+                src={arrowDown}
+                style={{ transform: "rotate(-90deg)", marginLeft: 5 }}
+                alt="arrow down"
+              />
+            </span>
+          </div>
           {/* </Container> */}
         </div>
       </Container>

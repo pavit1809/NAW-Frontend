@@ -7,6 +7,8 @@
   font-weight: 700;
   margin-bottom: 40px;
   font-family: "Playfair Display";
+  display: flex;
+  align-items: center;
 }
 
 .admin-users .add-user-banner {
@@ -91,6 +93,7 @@
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 46px;
+  margin-left: 8px;
   font-family: "Inter";
 
 }
@@ -172,7 +175,7 @@
 }
 
 .user-details {
-  margin: 10%;
+  margin: 7% 200px 0 270px;
 }
 
 .user-details .header-title {
@@ -263,6 +266,5 @@
 }
 
 .main-user-info-body{
-  margin-right: 100px;
-  margin-top: 300px;
+  margin: 4px 20px 0 20px
 }

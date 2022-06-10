@@ -101,7 +101,7 @@ const CreateAds = () => {
               placeholder="Upload the banner of the Ad"
               // value={adBanner}
             /> */}
-              <div className="file-upload">
+              <div className="file-upload" style={{ marginleft: "0" }}>
                 <span className="file-upload-placeholder">
                   Upload the banner of the Ad
                 </span>
@@ -123,7 +123,7 @@ const CreateAds = () => {
               </div>
             </div>
             <div className="input-block">
-              <label>Ads Purpose</label>
+              <label style={{marginBottom: "2px"}}>Ads Purpose</label>
               <div className="ads-purpose">
                 <input
                   type="checkbox"

@@ -24,13 +24,16 @@ export const BlogCard = ({ data, viewBlog, deleteBlog, editBlog }) => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              fontSize: "12px",
+              fontSize: "15px",
               lineHeight: "26px",
               color: "#9A9A9A",
             }}
           >
-            <span style={{}}>Blog Title</span>
-            <p>{title}</p>
+            <span style={{fontSize: "15px"}}>Blog Title</span>
+            <p style={{
+              fontSize: "18px",
+              lineHeight: "26px",
+            }}>{title}</p>
           </Grid>
           <Grid
             className="blog-innner"
@@ -38,13 +41,16 @@ export const BlogCard = ({ data, viewBlog, deleteBlog, editBlog }) => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              fontSize: "12px",
+              fontSize: "15px",
               lineHeight: "26px",
               color: "#9A9A9A",
             }}
           >
-            <span style={{}}>Blog Date</span>
-            <p>{blog_date}</p>
+            <span style={{fontSize: "15px"}}>Blog Date</span>
+            <p style={{
+              fontSize: "18px",
+              lineHeight: "26px",
+            }}>{blog_date}</p>
           </Grid>
           <Grid
             item
@@ -55,13 +61,13 @@ export const BlogCard = ({ data, viewBlog, deleteBlog, editBlog }) => {
               color: "#9A9A9A",
             }}
           >
-            <EditIcon color="primary" onClick={() => editBlog(id)} />
-            <DeleteIcon color="primary" onClick={() => deleteBlog(id)} />
+            <EditIcon color="primary" onClick={() => editBlog(id)} style={{marginRight:"8px"}}/>
+            <DeleteIcon color="primary" onClick={() => deleteBlog(id)} style={{marginLeft:"8px"}} />
           </Grid>
         </Grid>
         <Grid className="blog-innner">
-          <span style={{}}>Blog Description</span>
-          <p style={{ maxHeight: 50, overflow: "hidden" }}>{description}</p>
+          <span style={{fontSize: "15px"}}>Blog Description</span>
+          <p style={{ maxHeight: 50, overflow: "hidden", fontSize: "16px" }}>{description}</p>
         </Grid>
         {/* <Typography
           gutterBottom

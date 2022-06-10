@@ -70,10 +70,12 @@ function Dashboard() {
               Events
             </span>
             <br />
+            <br />
             <Card
               style={{
-                borderRadius: "20px",
+                borderRadius: "8px",
                 boxShadow: "0px 20px 45px #F0EDF6",
+                marginLeft: "10px"
               }}
             >
               <Card.Body>
@@ -87,9 +89,10 @@ function Dashboard() {
           <Col lg={5} sm={6}>
             <span className="section-title">Membership</span>
             <br />
+            <br />
             <ResponsiveContainer
               width="100%"
-              height="92%"
+              height="88%"
               className=" bg-white graph"
               strokeDasharray
               style={{
@@ -97,7 +100,7 @@ function Dashboard() {
                 boxShadow: "0px 20px 45px #F0EDF6",
               }}
             >
-              <LineChart width={530} height={100} data={data}>
+              <LineChart width={530} height={500} data={data}>
                 <XAxis dataKey="name" />
                 <YAxis />
                 <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
@@ -106,13 +109,15 @@ function Dashboard() {
             </ResponsiveContainer>
           </Col>
         </Row>
+        <br />
+        <br />
 
         <Row>
-          <span className="section-title mt-3 mb-3">Membership Categories</span>
+          <span className="section-title mt-3 mb-4">Membership Categories</span>
           <Col lg={4} sm={6}>
             <ResponsiveContainer
-              width="100%"
-              height="92%"
+              width="336px"
+              height="300px"
               className="mt-4 bg-white"
               strokeDasharray
             >
@@ -121,8 +126,8 @@ function Dashboard() {
           </Col>
           <Col lg={4} sm={6}>
             <ResponsiveContainer
-              width="100%"
-              height="92%"
+              width="336px"
+              height="300px"
               className="mt-4 bg-white"
               strokeDasharray
             >
@@ -131,8 +136,8 @@ function Dashboard() {
           </Col>
           <Col lg={4} sm={6}>
             <ResponsiveContainer
-              width="100%"
-              height="92%"
+              width="336px"
+              height="300px"
               className="mt-4 bg-white"
               strokeDasharray
             >

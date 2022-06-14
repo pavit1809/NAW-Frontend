@@ -136,7 +136,7 @@ const Index = () => {
             <label htmlFor="">Enter Banner</label>
             <div className="file-upload" style={{"margin-left": "-4px"}}>
               <span className="file-upload-placeholder">
-                Upload the banner of the event
+                {eventBanner ? eventBanner?.name : "Upload the banner of the event"}
               </span>
               <Button
                 variant="contained"

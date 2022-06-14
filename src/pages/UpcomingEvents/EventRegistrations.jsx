@@ -39,8 +39,8 @@ const EventRegistrations = () => {
     <Container className="container-xl">
       <Grid container spacing={3} justifyContent="space-between">
         <Grid xs={12} lg={8} xl={10} item>
-          <Typography variant="h2" className="section-title mt-0 text-darkblue">
-            Thank You for regestration! Here is the event community
+          <Typography style={{fontSize:"40px"}} variant="h2" className="section-title mt-0 text-darkblue">
+            Thank You for registration! Here is the event community
           </Typography>
         </Grid>
         <Grid xs={12} md={8} lg={8} xl={8} item>
@@ -50,7 +50,7 @@ const EventRegistrations = () => {
             sx={{
               color: "#616161",
               mb: 1,
-              fontSize: "20px !important",
+              fontSize: "30px !important",
             }}
           >
             Introduce Yourself
@@ -163,7 +163,7 @@ const EventRegistrations = () => {
             sx={{
               color: "#616161",
               mb: 1,
-              fontSize: "20px !important",
+              fontSize: "30px !important",
             }}
           >
             Social Feed

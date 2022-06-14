@@ -38,7 +38,7 @@ const EventAttendees = () => {
     <Container className="container-xl">
       <Grid container spacing={3} justifyContent="space-between">
         <Grid xs={12} md={12} lg={4} item>
-          <Typography variant="h2" className="section-title mt-0 text-darkblue">
+          <Typography variant="h1" className="section-title mt-0 text-darkblue">
             Event Organizers
           </Typography>
           <Box

@@ -75,7 +75,7 @@
 
 .admin-users .add-user-banner .file-upload .file-upload-placeholder {
   font-size: 14px;
-  color: rgba(21, 21, 34, 0.5);
+  /* color: rgba(21, 21, 34, 0.5); */
 }
 
 .admin-users .manage-users-section {

@@ -45,7 +45,7 @@ const UserEventDetails = () => {
 
   return (
     <Container className="container-xl">
-      <Typography variant="h3" className="section-title mt-0">
+      <Typography style={{fontSize:"40px"}} variant="h1" className="section-title mt-0 mb-16">
         Network After Work Virtual Networking
       </Typography>
       <Grid container spacing={3}>
@@ -95,7 +95,7 @@ const UserEventDetails = () => {
               </Paper>
             </Grid>
             <Grid item xs={4}>
-              <Typography className="title-md text-black" variant="p">
+              <Typography className="title-md text-black ml-8" variant="p">
                 5000
               </Typography>
             </Grid>
@@ -115,7 +115,7 @@ const UserEventDetails = () => {
               </Paper>
             </Grid>
             <Grid item xs={4}>
-              <Typography className="title-md text-black" variant="p">
+              <Typography className="title-md text-black ml-8" variant="p">
                 15000
               </Typography>
             </Grid>
@@ -135,148 +135,20 @@ const UserEventDetails = () => {
               </Paper>
             </Grid>
             <Grid item xs={4}>
-              <Typography className="title-md text-black" variant="p">
+              <Typography className="title-md text-black ml-8" variant="p">
                 2000
               </Typography>
             </Grid>
           </Grid>
 
-          {/* <Grid container direction={"column"}>
-            <Table sx={{ border: "none" }} aria-label="caption table">
-              <TableBody>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Date:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}></TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Time:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.time}
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Ticket Price:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.price}
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Membership:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.membership}
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Event Category:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.category}
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Event Tags:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.tags}
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      borderBottom: "none",
-                      py: 1,
-                      fontWeight: "600",
-                      pl: 0,
-                    }}
-                    component="th"
-                    variant="head"
-                  >
-                    Address:
-                  </TableCell>
-                  <TableCell sx={{ borderBottom: "none", py: 1 }}>
-                    {eventDetails.address}
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-            <Button variant="contained" sx={{ my: 2, width: "100%" }}>
-              First Time - Register Here
-            </Button>
-            <Button variant="contained" sx={{ my: 2, width: "100%" }}>
-              First Time - Register Here
-            </Button>
-          </Grid> */}
         </Grid>
       </Grid>
       <Grid>
         <Typography
-          sx={{ fontSize: "36px", fontWeight: "600", lineHeight: "60px" }}
+          sx={{ fontSize: "48px", fontWeight: "600", lineHeight: "60px" }}
           my={2}
-          className="section-title normal-font"
+          style={{fontSize: "40px"}}
+          className="section-title normal-font mb-16"
         >
           Andy and his dream to be Astronaut
         </Typography>

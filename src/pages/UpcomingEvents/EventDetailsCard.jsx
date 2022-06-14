@@ -34,7 +34,7 @@ const UserEventCardDetails = () => {
   };
   return (
     <Container className="container-xl">
-      <Typography variant="h3" className="section-title mt-0">
+      <Typography variant="h3" style={{fontSize:"40px"}} className="section-title mt-0">
         Network After Work Virtual Networking
       </Typography>
       <Grid container spacing={3}>
@@ -153,7 +153,7 @@ const UserEventCardDetails = () => {
           <CardContent>
             <Grid container spacing={2} p={0}>
               <Grid xs={12} md={8} xl={9} className="pt-0" item>
-                <Typography className="title-md text-black" variant="p">
+                <Typography style={{fontSize:"24px"}} className="title-md text-black" variant="p">
                   Free First Time Admission
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
@@ -200,7 +200,7 @@ const UserEventCardDetails = () => {
           <CardContent>
             <Grid container spacing={2} p={0}>
               <Grid xs={12} md={8} xl={9} className="pt-0" item>
-                <Typography className="title-md text-black" variant="p">
+                <Typography style={{fontSize:"24px"}} className="title-md text-black" variant="p">
                   Admission+1 yearly Membership
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
@@ -255,7 +255,7 @@ const UserEventCardDetails = () => {
           <CardContent>
             <Grid container spacing={2} p={0}>
               <Grid xs={12} md={8} xl={9} className="pt-0" item>
-                <Typography className="title-md text-black" variant="p">
+                <Typography style={{fontSize:"24px"}} className="title-md text-black" variant="p">
                   Free First Time Admission
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
@@ -303,7 +303,7 @@ const UserEventCardDetails = () => {
           <CardContent>
             <Grid container spacing={2} p={0}>
               <Grid xs={12} md={8} xl={9} className="pt-0" item>
-                <Typography className="title-md text-black" variant="p">
+                <Typography style={{fontSize:"24px"}} className="title-md text-black" variant="p">
                   LinkedIn Messaging
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">

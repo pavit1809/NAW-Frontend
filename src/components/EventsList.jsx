@@ -41,95 +41,8 @@ const EventsList = ({ navigationPath }) => {
       .catch((error) => console.log(error));
   };
 
-  // const events = [
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  //   {
-  //     image: EventPhoto,
-  //     date: "November 17, 2021",
-  //     time: "06 PM - 08 PM EST",
-  //     title: "Network After Work Houston",
-  //     action: "Get Tickets",
-  //   },
-  // ];
-
   return (
-    <Container disableGutters>
+    <Container style={{margin:"0", padding:"0"}} disableGutters>
       <Grid container justifyContent={"space-between"} mb={3}>
         <Paper
           className="event-search"
@@ -192,6 +105,7 @@ const EventsList = ({ navigationPath }) => {
                 description={event.description}
                 handleNext={(id) => id}
                 navigationPath={navigationPath}
+                isViewable
               />
             </Grid>
           );

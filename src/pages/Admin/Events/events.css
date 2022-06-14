@@ -88,7 +88,7 @@
 }
 .ad-row-two .file-upload .file-upload-placeholder {
   font-size: 14px;
-  color: rgba(21, 21, 34, 0.5);
+  /* color: rgba(21, 21, 34, 0.5); */
 }
 .ad-row-two .file-upload .file-upload-btn {
   background: #3670f8;

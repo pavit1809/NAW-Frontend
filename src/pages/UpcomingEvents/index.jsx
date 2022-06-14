@@ -45,9 +45,10 @@ const UpcomingEvents = () => {
 
   return (
     <Page title="Upcoming events">
+      <h1 style={{fontWeight: "700", marginLeft: "32px"}}>Upcoming Events</h1> 
       <Container maxWidth="xl">
         <EventsList navigationPath={"/d/event-details"} />
-        <Container disableGutters>
+        <Container style={{margin:"0", padding:"0"}} disableGutters>
           <Typography variant="h3" className="section-title">
             People who registered the Events
           </Typography>
@@ -67,7 +68,7 @@ const UpcomingEvents = () => {
                     Bill Smith
                   </Typography>
                 </Paper>
-                <Button variant="contained" className="muiButton-primary">
+                <Button variant="contained" size="small" className="muiButton-primary">
                   <ChatOutlinedIcon />
                   Chat
                 </Button>
@@ -89,6 +90,7 @@ const UpcomingEvents = () => {
                 <Button
                   variant="contained"
                   className="muiButton-primary"
+                  size="small" 
                   onClick={() => getChatRoom()}
                 >
                   <ChatOutlinedIcon />
@@ -109,7 +111,7 @@ const UpcomingEvents = () => {
                     Bill Smith
                   </Typography>
                 </Paper>
-                <Button variant="contained" className="muiButton-primary">
+                <Button variant="contained" size="small"  className="muiButton-primary">
                   <ChatOutlinedIcon />
                   Chat
                 </Button>

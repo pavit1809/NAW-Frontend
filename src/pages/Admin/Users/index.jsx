@@ -3,7 +3,7 @@ import "./Users.css";
 import userBanner from "../../../assets/admin-images/user-banner.png";
 import UserList from "./UserList";
 import arrowDown from "../../../assets/admin-images/arrow-down.png";
-import { Button } from "@mui/material";
+import { Button, Input } from "@mui/material";
 import { Container, Row, Col, Image, Card, Table } from "react-bootstrap";
 import axios from "axios";
 import "@fontsource/playfair-display";
@@ -51,6 +51,7 @@ const Users = () => {
     "margin-left": "-5rem",
   };
 
+  const [uploadedFile, setUploadedFile] = useState(null);
   return (
     <div className="admin-users">
       <Container>
@@ -96,7 +97,7 @@ const Users = () => {
                   <div className="file-upload">
                     {/* <input type="file" style={{ display: "none" }} /> */}
                     <span className="file-upload-placeholder">
-                      Upload csv file of user
+                      {uploadedFile ? uploadedFile : "Upload csv file of user"}
                     </span>
                     {/* <span className="file-upload-btn">Upload</span> */}
                     <Button
@@ -105,11 +106,12 @@ const Users = () => {
                       component="label"
                     >
                       Upload
-                      <input
+                      <Input
                         type="file"
                         hidden
-                        accept=".csv"
+                        // accept=".csv"
                         style={{ display: "none" }}
+                        onChange={(e) => setUploadedFile(e.target.files[0].name)}
                       />
                     </Button>
                   </div>
@@ -122,15 +124,15 @@ const Users = () => {
         <div className="manage-users-section">
           <div className="manage-title">Manage All Users</div>
           <div className="list-users-title">List of csv Files of users</div>
-              {usersList && usersList.length
-                ? usersList.map((item) => (
-                        <UserList
-                          key={item.id}
-                          userData={item}
-                          deleteClick={handleDeleteClick}
-                        />
-                  ))
-                : null}
+          {usersList && usersList.length
+            ? usersList.map((item) => (
+                <UserList
+                  key={item.id}
+                  userData={item}
+                  deleteClick={handleDeleteClick}
+                />
+              ))
+            : null}
           <div className="view-more-btn-container">
             <span className="view-more-btn">
               View More{" "}

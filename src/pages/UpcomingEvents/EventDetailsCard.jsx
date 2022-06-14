@@ -18,8 +18,10 @@ import "../../assets/styles/common.css";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import { useNavigate } from "react-router-dom";
 
 const UserEventCardDetails = () => {
+  const navigate = useNavigate();
   const eventDetails = {
     image: EventPhoto,
     date: "November 17, 2021",
@@ -351,6 +353,7 @@ const UserEventCardDetails = () => {
             variant="contained"
             my={2}
             className="shadow-btn checkout-btn"
+            onClick ={() => navigate("/event-checkout")}
           >
             Check Out
           </Button>

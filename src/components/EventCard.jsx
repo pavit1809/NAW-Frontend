@@ -29,6 +29,7 @@ export default function EventCard({
   author,
   handleNext,
   navigationPath,
+  isViewable,
 }) {
   const navigate = useNavigate();
 
@@ -37,6 +38,7 @@ export default function EventCard({
       sx={{ maxWidth: 345 }}
       xs={12}
       onClick={() =>
+      !isViewable &&
         navigate(navigationPath, {
           state: {
             EventId: id,
@@ -104,12 +106,44 @@ export default function EventCard({
             </Box>
           </Grid>
         )}
+        {isViewable && (
+          <Box sx={{ display: "flex", alignItems: "center", fontSize: "16px" }}>
+            <Button
+              component="a"
+              underline="none"
+              sx={{ color: "#3874FF !important", pl: "0 !important" }}
+              onClick={() =>
+                navigate(navigationPath, {
+                  state: {
+                    EventId: id,
+                    BlogId: "",
+                    memberId: "",
+                    userId: "",
+                    AdId: "",
+                  },
+                })
+              }
+              endIcon={<ArrowForward sx={{ color: "#3874FF !important" }} />}
+            >
+              View Contents
+            </Button>
+          </Box>
+        )}
         <Box sx={{ display: "flex", alignItems: "center", fontSize: "16px" }}>
           <Button
             component="a"
             underline="none"
             sx={{ color: "#3874FF !important", pl: "0 !important" }}
-            onClick={() => handleNext(id)}
+            onClick={() =>
+                navigate("/d/event-card-details", {
+                  state: {
+                    EventId: id,
+                    BlogId: "",
+                    memberId: "",
+                    userId: "",
+                    AdId: "",
+                  },
+                })}
             endIcon={<ArrowForward sx={{ color: "#3874FF !important" }} />}
           >
             {action}

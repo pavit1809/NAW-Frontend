@@ -42,7 +42,7 @@ const EventsList = ({ navigationPath }) => {
   };
 
   return (
-    <Container style={{margin:"0", padding:"0"}} disableGutters>
+    <Container disableGutters>
       <Grid container justifyContent={"space-between"} mb={3}>
         <Paper
           className="event-search"

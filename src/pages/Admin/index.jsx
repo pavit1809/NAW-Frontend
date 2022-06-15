@@ -58,7 +58,6 @@ function AdminLayout() {
       {path === "/admin/ads/edit-ads" && <EditAds />}
       {path === "/admin/ads/user-ads" && <UserAds />}
 
-      {path === "/admin/membership/edit-membership" && <EditMembership />}
     </div>
   );
 }

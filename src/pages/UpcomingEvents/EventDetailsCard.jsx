@@ -207,7 +207,7 @@ const UserEventCardDetails = () => {
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
                   $39
-                  <span className="label-md">+$2.18 Fee/ +$3.40 Sales Tax</span>
+                  <span className="label-md"> + $2.18 Fee/ +$3.40 Sales Tax</span>
                 </Typography>
               </Grid>
               <Grid xs={12} md={4} xl={3} className="pt-0" item>
@@ -262,7 +262,7 @@ const UserEventCardDetails = () => {
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
                   $299
-                  <span className="label-md">+$8.68 Fee</span>
+                  <span className="label-md"> + $8.68 Fee</span>
                 </Typography>
               </Grid>
               <Grid xs={12} md={4} xl={3} className="pt-0" item>
@@ -310,7 +310,7 @@ const UserEventCardDetails = () => {
                 </Typography>
                 <Typography className="section-title text-primary" variant="p">
                   $399
-                  <span className="label-md">+$11.18 Fee</span>
+                  <span className="label-md"> + $11.18 Fee</span>
                 </Typography>
               </Grid>
               <Grid xs={12} md={4} xl={3} className="pt-0" item>

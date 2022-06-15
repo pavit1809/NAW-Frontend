@@ -9,6 +9,7 @@ import VirtualSummit from '../../components/VirtualSummit';
 import UpcomingEventsSection from '../../components/UpcomingEventsSection'
 import LatestBlogPosts from '../../components/LatestBlogPosts'
 import HeroImageHome from '../../assets/images/hero-img.png'
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line no-unused-vars
 const useOutlinedInputStyles = makeStyles((theme) => ({
@@ -23,6 +24,13 @@ const useOutlinedInputStyles = makeStyles((theme) => ({
 export default function Home() {
   const outlinedInputClasses = useOutlinedInputStyles();
   // const history = useHistory();
+
+  const navigate = useNavigate();
+
+
+  const handleJoinNow = () => {
+    navigate('/sign-up');
+  }
 
   return (
     <>
@@ -44,7 +52,10 @@ export default function Home() {
               placeholder="Enter Your Email Address"
               endAdornment={
                 <InputAdornment position="end">
-                  <Button variant="contained">Join now</Button>
+                  <Button 
+                    variant="contained"
+                    onClick={handleJoinNow}
+                  >Join now</Button>
                 </InputAdornment>
               }
             />

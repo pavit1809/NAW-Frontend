@@ -2,6 +2,7 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 import * as React from "react";
 import PropTypes from "prop-types";
 import "../pages/Home/Home.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function HeroSection({
   heading,
@@ -12,6 +13,13 @@ export default function HeroSection({
   heroImageStyle,
   background,
 }) {
+
+  const navigate = useNavigate();
+  const redirectionToSignIn = () => {
+    localStorage.clear();
+    navigate('/sign-up');
+  }
+
   return (
     <div style={{ ...background }}>
       <Container disableGutters sx={{ pt: 8 }}>
@@ -40,6 +48,7 @@ export default function HeroSection({
                   variant="contained"
                   fullWidth={false}
                   sx={{ width: "fit-content", my: 1.5 }}
+                  onClick={redirectionToSignIn}
                 >
                   {ctaLabel}
                 </Button>

@@ -38,9 +38,9 @@ export default function SignIn() {
   const [countries, setCountries] = React.useState([]);
   const [states, setStates] = React.useState([]);
   const [cities, setCities] = React.useState([]);
-  const [companies, setCompanies] = React.useState([]);
-  const [industries, setIndustries] = React.useState([]);
-  const [jobTitles, setJobTitles] = React.useState([]);
+  // const [companies, setCompanies] = React.useState([]);
+  // const [industries, setIndustries] = React.useState([]);
+  // const [jobTitles, setJobTitles] = React.useState([]);
 
   const [open, setOpen] = React.useState(false);
   const [responseMessage, setResponseMessage] = React.useState("");
@@ -61,15 +61,15 @@ export default function SignIn() {
     getData("country").then((res) => {
       if (res.data) setCountries(res.data.data);
     });
-    getData("company").then((res) => {
-      if (res.data) setCompanies(res.data.data);
-    });
-    getData("industry").then((res) => {
-      if (res.data) setIndustries(res.data.data);
-    });
-    getData("job-title").then((res) => {
-      if (res.data) setJobTitles(res.data.data);
-    });
+    // getData("company").then((res) => {
+    //   if (res.data) setCompanies(res.data.data);
+    // });
+    // getData("industry").then((res) => {
+    //   if (res.data) setIndustries(res.data.data);
+    // });
+    // getData("job-title").then((res) => {
+    //   if (res.data) setJobTitles(res.data.data);
+    // });
   }, []);
 
   const findStates = (countryID) => {
@@ -97,7 +97,7 @@ export default function SignIn() {
       state: state,
       city: cities[0].id,
       company: "company",
-      job_title: "jobTitle",
+      job_title: "user",
       industry: "industry",
       client_id: process.env.REACT_APP_CLIENT_ID,
       client_secret: process.env.REACT_APP_CLIENT_SECRETE,
@@ -161,6 +161,10 @@ export default function SignIn() {
             flexDirection: "column",
           }}
         >
+          <br/>
+          <br/>
+          <br/>
+          <br/>
           <Typography component="h1" variant="h4">
             Sign Up
           </Typography>
@@ -293,60 +297,45 @@ export default function SignIn() {
               </Box>
               <Box sx={{ ml: 2, width: "45%" }} className="signup-field">
                 <InputLabel htmlFor="company">Company</InputLabel>
-                <Select
-                  labelId="company"
-                  id="company"
+                <TextField
+                  margin="normal"
                   required
                   fullWidth
+                  placeholder="Enter Job Title"
+                  id="company"
+                  name="company"
+                  autoFocus
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
-                >
-                  {companies.map((c, index) => {
-                    return (
-                      <MenuItem value={c.id} key={index}>
-                        {c.name}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
+                />
               </Box>
               <Box sx={{ mr: 2, width: "45%" }} className="signup-field">
                 <InputLabel htmlFor="job_title">Job Title</InputLabel>
-                <Select
-                  labelId="job_title"
-                  id="job_title"
+                <TextField
+                  margin="normal"
                   required
                   fullWidth
+                  placeholder="Enter Job Title"
+                  id="job_title"
+                  name="job_title"
+                  autoFocus
                   value={jobTitle}
                   onChange={(e) => setJobTitle(e.target.value)}
-                >
-                  {jobTitles.map((c, index) => {
-                    return (
-                      <MenuItem value={c.id} key={index}>
-                        {c.name}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
+                />
               </Box>
               <Box sx={{ ml: 2, width: "45%" }} className="signup-field">
                 <InputLabel htmlFor="industry">Industry</InputLabel>
-                <Select
-                  labelId="industry"
-                  id="industry"
+                <TextField
+                  margin="normal"
                   required
                   fullWidth
+                  placeholder="Enter Job Title"
+                  id="industry"
+                  name="industry"
+                  autoFocus
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
-                >
-                  {industries.map((c, index) => {
-                    return (
-                      <MenuItem value={c.id} key={index}>
-                        {c.name}
-                      </MenuItem>
-                    );
-                  })}
-                </Select>
+                />
               </Box>
             </Grid>
             <FormControlLabel

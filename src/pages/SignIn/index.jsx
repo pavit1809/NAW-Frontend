@@ -41,7 +41,11 @@ export default function SignIn() {
             const data = response.data;
             localStorage.setItem("auth", JSON.stringify(data.token));
             localStorage.setItem("currentUser", JSON.stringify(data.data));
-            navigate("/d/app");
+            if (data.data.job_title === 'jobTitle' || data.data.job_title === 'user'){
+              navigate("/d/app");
+            }else {
+              navigate("/admin/dashboard");
+            }
           }
         }
       })

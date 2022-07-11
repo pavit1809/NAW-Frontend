@@ -1,0 +1,28 @@
+.signin {
+    background: #fffcfc;
+}
+.signin img {
+height: 50.91666793823242px;
+width: 169.72222900390625px;
+left: 66.083984375px;
+top: 49.6943359375px;
+border-radius: 0px;
+
+}
+.signin-left {
+  margin-top: 5rem;
+}
+.signin-left h1 {
+font-family:'Times New Roman', Times, serif;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+
+}
+.signin-right{
+    padding: 1rem;
+}
+.signin-right img{
+    width: 100%;
+    height: 100%;
+}
